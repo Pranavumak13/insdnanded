@@ -1,8 +1,10 @@
-/* body{
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-} */
+.recruiters {
+  /* min-height: 100vh; */ /* Not needed ?? */
+  width: 100vw; /* Set maximum width of div to screen width */
+  overflow: hidden; /* Hide overflow to prevent horizontal scaling */
+  display: grid;
+  place-items: center;
+}
 
 .slider {
   height: 250px;

@@ -13,7 +13,13 @@ const Announcements = () => {
         color: "white",
       }}
     >
-      <div style={{ flex: "1", width: "50%", padding: "25px" }}>
+      <div
+        style={{
+          flex: "0.5", //Set flex to 0.5 (50% of page) and remove width
+          //width: "50%",
+          padding: "25px",
+        }}
+      >
         <h2>
           We are #insdians by <br />
           design.
@@ -44,9 +50,10 @@ const Announcements = () => {
       </div>
       <div
         style={{
-          flex: "1",
-          width: "50%",
-          justifyContent: "center",
+          flex: "0.5", //Set flex to 0.5 and remove width
+          // width: "100%",
+          display: "flex", //Make div flexbox to align contents
+          justifyContent: "flex-end", //Align image to end of div
           alignItems: "center",
         }}
       >
