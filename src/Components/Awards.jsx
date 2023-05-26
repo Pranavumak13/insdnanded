@@ -1,26 +1,22 @@
 import React from 'react'
+import "./Awards.css"
 
-const Awards = () => {
+export const Awards = () => {
   return (
-    <div style={{width:'auto', height:'440px'}}>
-    <div style={{display:'flex'}}>
-      <div style={{flex:1, width:'50%', height:'220px'}}>
-        <img src="/LOGO1.png" alt="" style={{width:'auto', height:'220px'}}/>
-      </div>
-      <div style={{flex:1, width:'50%', height:'220px'}}>
-        div2
-      </div>
-    </div>
-    
-    <div style={{display:'flex'}}>
-      <div style={{flex:1, width:'220px'}}>
-        div3
-      </div>
-      <div style={{flex:1, width:'220px'}}>
-        div4
-      </div>
-    </div>
-    </div>
+    <>
+        <div className='awards'>
+
+          <img src="/A1.jpg" alt="" />
+          <img src="/A2.jpg" alt="" />
+          <img src="/A5.jpg" alt="" />
+        </div>
+
+        <div className='awards'>
+          <img src="/A1.jpg" alt="" />
+          <img src="/A2.jpg" alt="" />
+          <img src="/A1.jpg" alt="" />
+        </div>
+    </>
   )
 }
 
