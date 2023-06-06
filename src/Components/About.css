@@ -4,6 +4,7 @@
   /* background-color: red; */
   min-height: fit-content;
   padding: 100px 0px;
+
 }
 
 .about-img {
@@ -80,4 +81,14 @@
     border: none;
     cursor: pointer;
   }
+}
+
+.rectangle{
+
+position: absolute;
+width: 6px;
+height: 200px;
+left: 1386px;
+top: 228px;
+
 }

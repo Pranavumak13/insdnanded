@@ -8,47 +8,34 @@ function About() {
     if (selectedSection === "wwd") {
       return (
         <>
-          <h1>What we do</h1>
+          {/* <h1>About Us</h1> <br /> */}
+          <br />
+          <h4 style={{fontWeight:"bold"}}>Learn from Leaders – One of the Best Designing Institute in Nanded</h4>
+          <br />
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheet...
+            INSD Nanded lives true to the fundamental meaning and purpose of design; nurtures aspiring designers, brings their ideas to life, gives wings to their aspirations and turns their dreams to reality.
           </p>
         </>
       );
     } else if (selectedSection === "om") {
       return (
         <>
-          <h1>Our Mission</h1>
-          <p>
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using 'Content here, content
-            here', making it look like readable English. Many desktop publishing
-            packages and web page editors now use Lorem Ipsum as their default
-            model text, and a search for 'lorem ipsum' will uncover many web
-            sites still in their infancy.
-          </p>
+          {/* <h1>Our Mission</h1> */}
+          <br />
+          <ul>
+            <li><b>To place designers in major categories</b> which benchmark the standards of design education and practice, and encourage them to think <b>‘global and act local’</b> supporting the local craftsmanship and sources of India.</li>
+            <br />
+            <li><b>To make quality and value-based learning</b> in the design industry of utmost importance</li>
+            </ul>
         </>
       );
     } else if (selectedSection === "og") {
       return (
         <>
-          <h1>Our Goal</h1>
+          {/* <h1>Uniqueness</h1> */}
+          <br />
           <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word in classical literature,
-            discovered the undoubtable source. Lorem Ipsum comes from sections
-            1.10.32 and 1.10.33...
+            U.G.C Recognised Degree and Diploma Courses, Curriculum created by Industry Experts, International student exchange programme, Well equipped infrastructure, Well qualified trainers, Internship with Industry, Live project Training, Flexible timings, Personal counselling, Placement Assistance, Flexible payment system, WI-FI enabled campus
           </p>
         </>
       );
@@ -68,7 +55,7 @@ function About() {
               setSelectedSection("wwd");
             }}
           >
-            What we do
+            About Us
           </button>
           <button
             className={
@@ -88,7 +75,7 @@ function About() {
               setSelectedSection("og");
             }}
           >
-            Our Goal
+            Uniqueness
           </button>
         </div>
         <div className="about-text">{renderData()}</div>
