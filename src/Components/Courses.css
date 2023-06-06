@@ -7,20 +7,32 @@
 }
 
 .courses-list {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
-  max-width: 100vw;
+  /* display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto; */
+  display: flex;
+}
+
+.courses-list .courses-box {
+  width: fit-content;
 }
 
 .courses-list button {
   width: auto;
   height: fit-content;
-  padding: 10px 50px;
-  margin: 8px;
+  background-color: #f0f0f0;
   border: none;
+  margin: 6px;
   cursor: pointer;
   transition: all 0.3s;
+}
+
+.courses-list .lower {
+  margin-top: 60px;
+}
+
+.courses-list button:hover {
+  background-color: #ddd;
 }
 
 .courses-list .course-active {
@@ -33,7 +45,7 @@
 }
 
 .courses-icon {
-  font-size: 80px;
+  font-size: 40px;
 }
 
 .courses-name {
@@ -42,6 +54,7 @@
 }
 
 .courses-data {
+  margin-top: 40px;
   padding: 4px;
 }
 
@@ -65,11 +78,18 @@
   }
   .courses-list {
     margin-right: 30px;
+    width: 45vw;
   }
   .courses-list button {
     width: 200px;
+    padding: 10px 50px;
+    margin: 8px;
+  }
+  .courses-list .lower {
+    margin-top: 160px;
   }
   .courses-data {
+    margin-top: 0px;
     width: 500px;
     margin-left: 30px;
   }
