@@ -8,6 +8,7 @@ const Navbar = () => {
     { name: "ABOUT", link: "/" },
     { name: "COURSES", link: "/" },
     { name: "CONTACT", link: "/" },
+   
   ];
   let [open, setOpen] = useState(false);
   return (
@@ -17,9 +18,10 @@ const Navbar = () => {
       <div className="md:flex items-center justify-between bg-white py-4 md:px-10 px-7">
         <div className="text-sm cursor-pointer flex items-center font-[serif] text-gray-800">
           <span className="text-3xl text-black-600 mr-1 pt-2">
-            <img src="/insdlogo.jpg" alt="logo" className="h-14 justify" />
+          <a href="http://localhost:3000/"><img src="/insdlogo.jpg" alt="logo" className="h-14 justify-center" /></a>
+          
           </span>
-          {/* Designer */}
+         {/* Designer */}
         </div>
 
         <div
