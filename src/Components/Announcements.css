@@ -1,4 +1,14 @@
-.test {
-  background-color: rebeccapurple;
+.ann-img {
+  display: none;
 }
 
+@media only screen and (min-width: 786px) {
+  .ann-img {
+    display: block;
+    height: 440px;
+    width: auto;
+  }
+  .ann-data {
+    margin-left: 200px;
+  }
+}

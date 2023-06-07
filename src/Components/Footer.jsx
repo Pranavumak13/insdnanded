@@ -29,11 +29,11 @@ export default function Footer() {
       <div className="mx-auto w-full bg-black" style={{ padding: 25 }}>
         {" "}
         <div className="grid grid-cols-1 text-center md:grid-cols-3 justify-between md:text-left">
-          <div className="mb-6">
+          <div className="mb-6 flex flex-col justify-center">
             <img
               src="/LOGO3.png"
               alt="INSD Nanded"
-              className="w-40 h-auto"
+              className="w-60 h-auto"
               style={{
                 paddingTop: "22px",
                 marginLeft: "50px",
@@ -41,30 +41,29 @@ export default function Footer() {
               }}
             />
             <p
-              className="text-white text-xs"
+              className="text-white text-xs self-center"
               style={{
-                position: "relative",
                 width: "90%",
-                left: "45px",
-                top: "50px",
+                marginTop: "50px",
                 fontFamily: "Inter",
                 fontStyle: "normal",
                 fontWeight: "400",
                 fontSize: "12px",
                 lineHeight: "15px",
 
-                // Responsive styles
-                "@media (max-width: 375px)": {
-                  width: "90%",
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  right: "40%",
-                  top: "50%",
-                  fontFamily: "Inter",
-                  fontStyle: "normal",
-                  fontSize: "10px",
-                  lineHeight: "12px",
-                },
+                // Responsive styles // ?????????
+                // "@media (max-width: 375px)": {
+                //   width: "90%",
+                //   left: "50%",
+                //   transform: "translateX(-50%)",
+                //   right: "40%",
+                //   top: "50%",
+                //   fontFamily: "Inter",
+                //   fontStyle: "normal",
+                //   fontSize: "10px",
+                //   lineHeight: "12px",
+                //   color: "red",
+                // },
               }}
             >
               At INSD, Nanded we strongly believe in providing quality education
@@ -106,8 +105,11 @@ export default function Footer() {
             </p>
             <input
               type="email"
-              name="email@email.com"
+              placeholder="email@email.com"
               style={{
+                padding: "0px 16px",
+                color: "#000",
+                width: "200px",
                 height: "35px",
                 borderTopLeftRadius: "20px",
                 borderBottomLeftRadius: "20px",
