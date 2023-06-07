@@ -28,7 +28,7 @@ const Regi2 = () => {
     // Forward to db
   };
 
-  let Ddate = new Date("Aug 25, 2023 00:00:00").getTime();
+  let Ddate = new Date("Jun 10, 2023 00:00:00").getTime();
 
   const setTime = () => {
     let getDate = new Date();
@@ -52,10 +52,8 @@ const Regi2 = () => {
           <div className="block">
             <div className="">
               <h1 className="text-5xl font-bold mx-5 pt-10">Register Now</h1>
-              <h1 className="text-[.9rem] mx-5 pt-4">
-                Looking for bla-bla black sheep.... Lorem ipsum dolor sit amet,
-                qui minim labore adipisicing minim sint cillum sint consectetur
-                cupidatat.
+              <h1 className="text-[.9rem] mx-5 pt-4 ">
+                Explore a wide range of courses with INSD Nanded.
               </h1>
             </div>
             <div className="flex justify-center px-5 gap-4 mt-5">

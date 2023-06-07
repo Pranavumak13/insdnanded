@@ -18,7 +18,11 @@
 }
 
 .courses-list button {
-  width: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 20vw;
   height: fit-content;
   background-color: #f0f0f0;
   border: none;
@@ -49,7 +53,7 @@
 }
 
 .courses-name {
-  font-size: 16px;
+  font-size: 12px;
   text-transform: capitalize;
 }
 
@@ -83,10 +87,9 @@
   .courses-list button {
     width: 200px;
     padding: 10px 50px;
-    margin: 8px;
   }
   .courses-list .lower {
-    margin-top: 160px;
+    margin-top: 120px;
   }
   .courses-data {
     margin-top: 0px;
@@ -94,7 +97,7 @@
     margin-left: 30px;
   }
   .courses-icon {
-    font-size: 120px;
+    font-size: 100px;
   }
 
   .courses-name {

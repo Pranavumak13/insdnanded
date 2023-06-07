@@ -1,5 +1,44 @@
 import React from "react";
+import Popup from "reactjs-popup";
 import "./Events.css";
+
+import gauharkhan from "../img/celebrities/gauharkhan.jpg";
+import gauharkhanst from "../img/celebrities/gauharkhan_students.jpg";
+import nikitadutta from "../img/celebrities/nikitadutta.jpg";
+import nikitaduttast from "../img/celebrities/nikitadutta_students.jpg";
+import mikhasingh from "../img/celebrities/mikhasingh.jpg";
+import karishmakapoor from "../img/celebrities/karishmakapoor.jpg";
+
+const Tile = (props) => {
+  return (
+    <Popup
+      trigger={
+        <div
+          className={
+            props.desktop ? "events-item events-desktop-item" : "events-item"
+          }
+          style={{ backgroundImage: `url(${props.img})` }}
+        >
+          <div className="events-cover"></div>
+        </div>
+      }
+    >
+      {(close) => (
+        <div className="events-img">
+          <img src={props.img} alt="event" />
+          <button
+            className="close-btn"
+            onClick={() => {
+              close();
+            }}
+          >
+            x
+          </button>
+        </div>
+      )}
+    </Popup>
+  );
+};
 
 function Events() {
   return (
@@ -10,11 +49,11 @@ function Events() {
         consequat.
       </p> */}
       <div className="events-grid">
-        <div className="events-item"><img src="/Event1.jpg" alt="" style={{height:"250px"}}/></div>
-        <div className="events-item"><img src="/Event6.jpg" alt="" style={{height:"250px"}}/></div>
-        <div className="events-item events-desktop-item"><img src="/Event3.jpg" alt="" style={{height:"516px"}}/></div>
-        <div className="events-item"><img src="/Event5.jpg" alt="" style={{height:"250px"}}/></div>
-        <div className="events-item"><img src="/Event4.jpg" alt="" style={{height:"250px"}}/></div>
+        <Tile img={nikitadutta} />
+        <Tile img={gauharkhan} />
+        <Tile img={karishmakapoor} desktop />
+        <Tile img={mikhasingh} />
+        <Tile img={gauharkhanst} />
       </div>
     </div>
   );
