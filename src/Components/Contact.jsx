@@ -1,10 +1,12 @@
 import { useState } from "react";
 import Tbox from "./Contact2";
+import "./Contact.css";
 
 const Regi2 = () => {
   const [name, setName] = useState(null);
   const [phone, setPhone] = useState(null);
   const [email, setEmail] = useState(null);
+  const [choice, setChoice] = useState(null);
 
   const [tday, setTday] = useState(null);
   const [thour, setThour] = useState(null);
@@ -23,12 +25,16 @@ const Regi2 = () => {
     setEmail(e.target.value);
   };
 
+  const choiceHandler = (e) => {
+    setChoice(e.target.value);
+  };
+
   const submitHandler = () => {
     console.log("73");
     // Forward to db
   };
 
-  let Ddate = new Date("Jun 10, 2023 00:00:00").getTime();
+  let Ddate = new Date("June 18, 2023 00:00:00").getTime();
 
   const setTime = () => {
     let getDate = new Date();
@@ -91,6 +97,26 @@ const Regi2 = () => {
                     placeholder="Email Address"
                     required
                   />
+                  <select
+                    name="courses"
+                    id="courses"
+                    className="border-solid border-b-2 border-black outline-none bg-transparent w-full py-2 my-2"
+                    onChange={choiceHandler}
+                    required
+                  >
+                    <option className="special-option" value="none" disabled selected hidden >
+                      Select a course
+                    </option>
+                    <option value="fashion">Fashion Designing</option>
+                    <option value="interior">Interior Designing</option>
+                    <option value="textile">Textile Designing</option>
+                    <option value="jewellery">Jewellery Designing</option>
+                    <option value="graphic">Graphic Designing</option>
+                    <option value="animation & vfx">Animation & VFX</option>
+                    <option value="photography">Photography</option>
+                    <option value="beauty & hair">Beauty & Hair</option>
+                  </select>
+
                   <input
                     type="submit"
                     className="border-none rounded-xl outline-none bg-gradient-to-r from-[#E94484] to-[#E68F5C] w-full py-4 text-white mt-5"

@@ -30,7 +30,7 @@ const Announcements = () => {
           style={{ paddingRight: "21%", color: "#E7DBCE", fontWeight: "bold" }}
         >
           At INSD Nanded, we provide various design courses to let the students
-          understand the different designing concepts and gain anedge over
+          understand the different designing concepts and gain an edge over
           in-demand skills. Our global outlook further helps us to stay afloat
           in the market.
         </p>

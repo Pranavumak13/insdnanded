@@ -4,14 +4,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faInstagram,
+  faLinkedin,
   faTwitter,
+  faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 
 const LINKS = [
   {
     items: [
-      "About",
-      "Service",
+      "Home",
+      "About us",
       "Team",
       "Privacy Policy",
       "Testimonial",
@@ -146,28 +148,53 @@ export default function Footer() {
           className="mb-4 text-center font-normal md:mb-0"
         >
           &copy; {currentYear} INSDnanded |
-          <a href="https://google.com/"> Web Development By ...</a>
+          <a href="#"> Web Development By Team APJ</a>
         </Typography>
         <div className="flex gap-4 text-blue-gray-900 sm:justify-center">
           <Typography
             as="a"
-            href="#"
-            className="opacity-80 transition-opacity hover:opacity-100"
-          >
-            <FontAwesomeIcon icon={faFacebook} />{" "}
-            {/* Replace svg with FontAwesomeIcon */}
-          </Typography>
-          <Typography
-            as="a"
-            href="#"
+            href="https://www.instagram.com/insdnanded/?igshid=NTc4MTIwNjQ2YQ%3D%3D"
+            target="_blank"
             className="opacity-80 transition-opacity hover:opacity-100"
           >
             <FontAwesomeIcon icon={faInstagram} />{" "}
             {/* Replace svg with FontAwesomeIcon */}
           </Typography>
+
           <Typography
             as="a"
-            href="#"
+            href="https://www.facebook.com/profile.php?id=100092238022279"
+            target="_blank"
+            className="opacity-80 transition-opacity hover:opacity-100"
+          >
+            <FontAwesomeIcon icon={faFacebook} />{" "}
+            {/* Replace svg with FontAwesomeIcon */}
+          </Typography>
+
+          <Typography
+            as="a"
+            href="https://www.yotube.com"
+            target="_blank"
+            className="opacity-80 transition-opacity hover:opacity-100"
+          >
+            <FontAwesomeIcon icon={faYoutube} />{" "}
+            {/* Replace svg with FontAwesomeIcon */}
+          </Typography>
+
+          <Typography
+            as="a"
+            href="https://www.linkedin.com"
+            target="_blank"
+            className="opacity-80 transition-opacity hover:opacity-100"
+          >
+            <FontAwesomeIcon icon={faLinkedin} />{" "}
+            {/* Replace svg with FontAwesomeIcon */}
+          </Typography>
+
+          <Typography
+            as="a"
+            href="https://www.twitter.com"
+            target="_blank"
             className="opacity-80 transition-opacity hover:opacity-100"
           >
             <FontAwesomeIcon icon={faTwitter} />{" "}

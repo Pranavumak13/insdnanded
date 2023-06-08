@@ -53,7 +53,11 @@ function Courses() {
           <FontAwesomeIcon icon={iconSelector(props.name)} />
         </div>
         <div className="courses-name">
-          {props.name} {props.name === "animation & vfx" ? "" : "Design"}
+          {props.name === "animation & vfx" ||
+          props.name === "photography" ||
+          props.name === "beauty & hair"
+            ? props.name
+            : props.name + " Design"}
         </div>
       </button>
     );
@@ -219,25 +223,7 @@ function Courses() {
       return (
         <>
           <h1>Photography</h1> <br />
-          <p>
-            Animation Courses Are One Of The Most Demanded Courses Today.
-            International School of Design offers the Most comprehensive
-            Animation Course in Nanded. Animation Is About Creating Visual
-            Effects With Using Latest Technologies And More Visual Treat. India
-            Is Emerging In The Field Of Animation And This Would Create A Lot Of
-            Employment Opportunities In India. Companies Like Disney Are
-            Outsourcing Their Animation Work From India. Its One Of The Goldmine
-            Fields To Explore. This Profession Is Very Remunerative And Requires
-            Determination.
-            <br />
-            <br />
-            In This Course, You Will Be Familiarized To A Variety Of Forms Of
-            Animation. Through Primary Projects, You Will Be Trained About The
-            Production Of Different Forms And Techniques Of Animation. We Will
-            Also Be Looking At An Overview Of The Technical And Historical
-            Evolution Of Animation To Help You Understand And Acknowledge The
-            Art.
-          </p>
+          <p>Coming soon....</p>
           <br />
           <button>Apply now</button>
         </>
@@ -247,23 +233,7 @@ function Courses() {
         <>
           <h1>Beauty & Hair</h1> <br />
           <p>
-            Animation Courses Are One Of The Most Demanded Courses Today.
-            International School of Design offers the Most comprehensive
-            Animation Course in Nanded. Animation Is About Creating Visual
-            Effects With Using Latest Technologies And More Visual Treat. India
-            Is Emerging In The Field Of Animation And This Would Create A Lot Of
-            Employment Opportunities In India. Companies Like Disney Are
-            Outsourcing Their Animation Work From India. Its One Of The Goldmine
-            Fields To Explore. This Profession Is Very Remunerative And Requires
-            Determination.
-            <br />
-            <br />
-            In This Course, You Will Be Familiarized To A Variety Of Forms Of
-            Animation. Through Primary Projects, You Will Be Trained About The
-            Production Of Different Forms And Techniques Of Animation. We Will
-            Also Be Looking At An Overview Of The Technical And Historical
-            Evolution Of Animation To Help You Understand And Acknowledge The
-            Art.
+            Coming soon...
           </p>
           <br />
           <button>Apply now</button>
