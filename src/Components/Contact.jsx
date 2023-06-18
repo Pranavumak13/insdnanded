@@ -1,6 +1,9 @@
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import Tbox from "./Contact2";
 import "./Contact.css";
+import Button from "./Button";
 
 const Regi2 = () => {
   const [name, setName] = useState(null);
@@ -34,7 +37,31 @@ const Regi2 = () => {
     // Forward to db
   };
 
-  let Ddate = new Date("June 18, 2023 00:00:00").getTime();
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_hk6g79n",
+        "template_2skh8fm",
+        form.current,
+        "IjXiPfw_F9L44p2QZ"
+      )
+      .then(
+        (result) => {
+          alert("Message sent successfully");
+          console.log(result.text);
+        },
+        (error) => {
+          console.log("Error")
+          console.log(error.text);
+        }
+      );
+  };
+
+  let Ddate = new Date("June 28, 2023 00:00:00").getTime();
 
   const setTime = () => {
     let getDate = new Date();
@@ -72,7 +99,7 @@ const Regi2 = () => {
           <div className="w-full md:w-max text-black">
             <div className="h-max max-w-sm mx-auto bg-white rounded-2xl flex items-center justify-center p-10 md:mr-5 shadow-md">
               <div>
-                <form action="">
+                <form ref={form} onSubmit={sendEmail}>
                   <div className="flex justify-center w-full">
                     <h1 className="my-2 text-lg">For Courses Info</h1>
                   </div>
@@ -81,10 +108,12 @@ const Regi2 = () => {
                     className="border-solid border-b-2 border-black outline-none w-full py-2 my-2"
                     onChange={nameHandler}
                     placeholder="Full Name"
+                    name="user_name"
                     required
                   />
                   <input
                     type="tel"
+                    name="user_phone"
                     className="border-solid border-b-2 border-black outline-none w-full py-2 my-2"
                     onChange={phoneHandler}
                     placeholder="Phone Number"
@@ -92,37 +121,38 @@ const Regi2 = () => {
                   />
                   <input
                     type="email"
+                    name="user_email"
                     className="border-solid border-b-2 border-black outline-none w-full py-2 my-2"
                     onChange={emailHandler}
                     placeholder="Email Address"
                     required
                   />
                   <select
-                    name="courses"
+                    name="user_course"
                     id="courses"
                     className="border-solid border-b-2 border-black outline-none bg-transparent w-full py-2 my-2"
                     onChange={choiceHandler}
+                    value={choice}
                     required
                   >
-                    <option className="special-option" value="none" disabled selected hidden >
+                   <option value="" disabled hidden>
                       Select a course
                     </option>
-                    <option value="fashion">Fashion Designing</option>
-                    <option value="interior">Interior Designing</option>
-                    <option value="textile">Textile Designing</option>
-                    <option value="jewellery">Jewellery Designing</option>
-                    <option value="graphic">Graphic Designing</option>
-                    <option value="animation & vfx">Animation & VFX</option>
-                    <option value="photography">Photography</option>
-                    <option value="beauty & hair">Beauty & Hair</option>
+                    <option value="Fashion Design">Fashion Designing</option>
+                    <option value="Interior Desgin">Interior Designing</option>
+                    <option value="Textile Design">Textile Designing</option>
+                    <option value="Jewellery Design">Jewellery Designing</option>
+                    <option value="Graphic Design">Graphic Designing</option>
+                    <option value="Animation & VFC">Animation & VFX</option>
+                    <option value="Photography">Photography</option>
+                    <option value="Beauty & Hair">Beauty & Hair</option>
                   </select>
 
-                  <input
+                  <button
                     type="submit"
                     className="border-none rounded-xl outline-none bg-gradient-to-r from-[#E94484] to-[#E68F5C] w-full py-4 text-white mt-5"
-                    onClick={submitHandler}
-                    value="SUBMIT"
-                  />
+                  >Submit
+                  </button>
                 </form>
               </div>
             </div>

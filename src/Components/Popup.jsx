@@ -1,4 +1,6 @@
+import emailjs from "@emailjs/browser";
 import React, { useState, useEffect } from "react";
+import { useRef } from "react";
 import "./Popup.css";
 
 function Popup() {
@@ -22,10 +24,34 @@ function Popup() {
   const choiceHandler = (e) => {
     setChoice(e.target.value);
   };
-  
+
   const submitHandler = () => {
     console.log("73");
     // Forward to db
+  };
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_hk6g79n",
+        "template_2skh8fm",
+        form.current,
+        "IjXiPfw_F9L44p2QZ"
+      )
+      .then(
+        (result) => {
+          alert("Message sent successfully");
+          console.log(result.text);
+        },
+        (error) => {
+          alert("Error has occurred");
+          console.log(error.text);
+        }
+      );
   };
 
   const [isShowPop, setIsShowPop] = useState(false);
@@ -47,19 +73,21 @@ function Popup() {
         >
           x
         </div>
-        <form action="">
+        <form ref={form} onSubmit={sendEmail}>
           <div className="flex justify-center w-full">
-            <h1 className="my-4 text-xl">Get in touch!</h1>
+            <h1 className="my-2 text-lg">For Courses Info</h1>
           </div>
           <input
             type="text"
             className="border-solid border-b-2 border-black outline-none w-full py-2 my-2"
             onChange={nameHandler}
             placeholder="Full Name"
+            name="user_name"
             required
           />
           <input
             type="tel"
+            name="user_phone"
             className="border-solid border-b-2 border-black outline-none w-full py-2 my-2"
             onChange={phoneHandler}
             placeholder="Phone Number"
@@ -67,36 +95,39 @@ function Popup() {
           />
           <input
             type="email"
+            name="user_email"
             className="border-solid border-b-2 border-black outline-none w-full py-2 my-2"
             onChange={emailHandler}
             placeholder="Email Address"
             required
           />
           <select
-                    name="courses"
-                    id="courses"
-                    className="border-solid border-b-2 border-black outline-none bg-transparent w-full py-2 my-2"
-                    onChange={choiceHandler}
-                    required
-                  >
-                    <option className="special-option" value="none" disabled selected hidden >
-                      Select a course
-                    </option>
-                    <option value="fashion">Fashion Designing</option>
-                    <option value="interior">Interior Designing</option>
-                    <option value="textile">Textile Designing</option>
-                    <option value="jewellery">Jewellery Designing</option>
-                    <option value="graphic">Graphic Designing</option>
-                    <option value="animation & vfx">Animation & VFX</option>
-                    <option value="photography">Photography</option>
-                    <option value="beauty & hair">Beauty & Hair</option>
-                  </select>
-          <input
+            name="user_course"
+            id="courses"
+            className="border-solid border-b-2 border-black outline-none bg-transparent w-full py-2 my-2"
+            onChange={choiceHandler}
+            value={choice}
+            required
+          >
+            <option value="" disabled hidden>
+              Select a course
+            </option>
+            <option value="Fashion Design">Fashion Designing</option>
+            <option value="Interior Desgin">Interior Designing</option>
+            <option value="Textile Design">Textile Designing</option>
+            <option value="Jewellery Design">Jewellery Designing</option>
+            <option value="Graphic Design">Graphic Designing</option>
+            <option value="Animation & VFC">Animation & VFX</option>
+            <option value="Photography">Photography</option>
+            <option value="Beauty & Hair">Beauty & Hair</option>
+          </select>
+
+          <button
             type="submit"
-            className="border-none outline-none bg-gradient-to-r from-[#E94484] to-[#E68F5C] w-full p-4 text-white mt-5"
-            onClick={submitHandler}
-            value="SUBMIT"
-          />
+            className="border-none rounded-xl outline-none bg-gradient-to-r from-[#E94484] to-[#E68F5C] w-full py-4 text-white mt-5"
+          >
+            Submit
+          </button>
         </form>
       </div>
     </div>

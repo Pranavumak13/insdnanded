@@ -223,7 +223,11 @@ function Courses() {
       return (
         <>
           <h1>Photography</h1> <br />
-          <p>Coming soon....</p>
+          <p>This diploma course in creative photography has been designed & created for individuals who are planning to build their career in professional photography. <br></br>
+          The Professional Photography Course is split into three modules and all sessions are assignment based. Students will be given weekly assignments which are mentored by a faculty. There will be professional and renowned photographers who will conduct some lectures and mentor students throughout the year. <br />
+          There will be regular assessment of student work and critique will be provided to help improve understanding of concept, skill, technique and presentation. <br />
+          INSD USP gives you exposure to the best professionals who would guide you on a regular basis by observing & mentoring your work.The course will follow the latest market practices in various aspects of photography so that students are kept updated to the present time and ever evolving world and requirements of the photography industry. <br />
+          During the end of the term, students have an option to specialize in different genres of photography, e.g. photojournalism, commercial & product photography, fashion photography etc.</p>
           <br />
           <button>Apply now</button>
         </>
@@ -233,7 +237,9 @@ function Courses() {
         <>
           <h1>Beauty & Hair</h1> <br />
           <p>
-            Coming soon...
+          The cosmetic industry is one of the fast-growing industry with ever growing demand for Best Makeup Artists. INSD Nanded conducts best makeup classes in Nanded. Today beauty care is a global multi-billion dollar industry that employs millions of people - from scientists and production engineers' right up to your neighborhood pedicurist and mehndiwalli. If you have an eye for beauty, enjoy interacting with people and delight in transforming a plain jane into a stunning sophisticate, beauty care is a field you could excel in. <br />
+          <br />
+          Although tastes and trends keep changing, the basic job of beauty care professionals remains the same: to help people look their best! <br />
           </p>
           <br />
           <button>Apply now</button>
