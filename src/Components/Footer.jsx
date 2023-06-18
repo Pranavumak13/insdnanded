@@ -14,8 +14,8 @@ const LINKS = [
     items: [
       "Home",
       "About us",
-      "Team",
-      "Privacy Policy",
+      "Courses",
+      "Brochure",
       "Testimonial",
       "Support",
     ],
@@ -38,7 +38,7 @@ export default function Footer() {
               className="w-60 h-auto"
               style={{
                 paddingTop: "22px",
-                marginLeft: "50px",
+                marginLeft: "80px",
                 marginRight: "62px",
               }}
             />
@@ -46,7 +46,10 @@ export default function Footer() {
               className="text-white text-xs self-center"
               style={{
                 width: "90%",
-                marginTop: "50px",
+                marginTop: "25px",
+                // textAlign: "start",
+                marginLeft: "80px",
+                color: "#E7DBCE",
                 fontFamily: "Inter",
                 fontStyle: "normal",
                 fontWeight: "400",
@@ -68,15 +71,13 @@ export default function Footer() {
                 // },
               }}
             >
-              At INSD, Nanded we strongly believe in providing quality education
-              by setting high academic standards and providing hands-on learning
-              experiences to its students.
+              <h6>At INSD, Nanded we strongly believe in providing quality education <br /> by setting high academic standards and providing hands-on <br /> learning experiences to its students.</h6>
             </p>
           </div>
 
-          <div className="grid grid-cols-1 text-center md:grid-cols-1 justify-between gap-3 md:ml-40  md:text-left">
+          <div className="grid grid-cols-1 text-center  md:grid-cols-1 justify-between gap-3 md:ml-40  md:text-left">
             {LINKS.map(({ items }) => (
-              <ul className="mb-6">
+              <ul className="mb-6" style={{ alignItems: "center" }}>
                 <Typography
                   variant="small"
                   color="white"
@@ -98,14 +99,68 @@ export default function Footer() {
             ))}
           </div>
 
-          <div className="text-white">
-            <h1>Register Now</h1>
+          <div className="text-black" style={{ color: "#E7DBCE" }}>
+            <h1 className="text-white">Contact Us</h1>
             <p style={{ paddingTop: "20px", paddingBottom: "20px" }}>
               {" "}
-              The wide variety of entrepreneurial programs offered to students
-              makes sure the current needs of the industry are met.
+              1st Floor, Bhagwati plaza, <br /> Beside Union Bank,Ashok Nagar, <br /> Bhagya Nagar Road, <br /> Nanded.
+              <br />
+              <br />
+              +91-8605431313, 9665070493
+              <br /><br />
+              <div className="flex gap-4 text-white sm:justify-start">
+                <Typography
+                  as="a"
+                  href="https://www.instagram.com/insdnanded/?igshid=NTc4MTIwNjQ2YQ%3D%3D"
+                  target="_blank"
+                  className="opacity-80 transition-opacity hover:opacity-100"
+                >
+                  <FontAwesomeIcon icon={faInstagram} />{" "}
+                  {/* Replace svg with FontAwesomeIcon */}
+                </Typography>
+
+                <Typography
+                  as="a"
+                  href="https://www.facebook.com/profile.php?id=100092238022279"
+                  target="_blank"
+                  className="opacity-80 transition-opacity hover:opacity-100"
+                >
+                  <FontAwesomeIcon icon={faFacebook} />{" "}
+                  {/* Replace svg with FontAwesomeIcon */}
+                </Typography>
+
+                <Typography
+                  as="a"
+                  href="https://www.yotube.com"
+                  target="_blank"
+                  className="opacity-80 transition-opacity hover:opacity-100"
+                >
+                  <FontAwesomeIcon icon={faYoutube} />{" "}
+                  {/* Replace svg with FontAwesomeIcon */}
+                </Typography>
+
+                <Typography
+                  as="a"
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  className="opacity-80 transition-opacity hover:opacity-100"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} />{" "}
+                  {/* Replace svg with FontAwesomeIcon */}
+                </Typography>
+
+                <Typography
+                  as="a"
+                  href="https://www.twitter.com"
+                  target="_blank"
+                  className="opacity-80 transition-opacity hover:opacity-100"
+                >
+                  <FontAwesomeIcon icon={faTwitter} />{" "}
+                  {/* Replace svg with FontAwesomeIcon */}
+                </Typography>
+              </div>
             </p>
-            <input
+            {/* <input
               type="email"
               placeholder="email@email.com"
               style={{
@@ -130,7 +185,7 @@ export default function Footer() {
               }}
             >
               Submit
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
@@ -140,6 +195,7 @@ export default function Footer() {
         style={{
           background:
             "linear-gradient(90deg, rgba(233,68,132,1) 0%, rgba(230,143,92,1) 100%)",
+            alignItems:"center"
         }}
       >
         <Typography
@@ -150,57 +206,6 @@ export default function Footer() {
           &copy; {currentYear} INSDnanded |
           <a href="#"> Web Development By Team APJ</a>
         </Typography>
-        <div className="flex gap-4 text-blue-gray-900 sm:justify-center">
-          <Typography
-            as="a"
-            href="https://www.instagram.com/insdnanded/?igshid=NTc4MTIwNjQ2YQ%3D%3D"
-            target="_blank"
-            className="opacity-80 transition-opacity hover:opacity-100"
-          >
-            <FontAwesomeIcon icon={faInstagram} />{" "}
-            {/* Replace svg with FontAwesomeIcon */}
-          </Typography>
-
-          <Typography
-            as="a"
-            href="https://www.facebook.com/profile.php?id=100092238022279"
-            target="_blank"
-            className="opacity-80 transition-opacity hover:opacity-100"
-          >
-            <FontAwesomeIcon icon={faFacebook} />{" "}
-            {/* Replace svg with FontAwesomeIcon */}
-          </Typography>
-
-          <Typography
-            as="a"
-            href="https://www.yotube.com"
-            target="_blank"
-            className="opacity-80 transition-opacity hover:opacity-100"
-          >
-            <FontAwesomeIcon icon={faYoutube} />{" "}
-            {/* Replace svg with FontAwesomeIcon */}
-          </Typography>
-
-          <Typography
-            as="a"
-            href="https://www.linkedin.com"
-            target="_blank"
-            className="opacity-80 transition-opacity hover:opacity-100"
-          >
-            <FontAwesomeIcon icon={faLinkedin} />{" "}
-            {/* Replace svg with FontAwesomeIcon */}
-          </Typography>
-
-          <Typography
-            as="a"
-            href="https://www.twitter.com"
-            target="_blank"
-            className="opacity-80 transition-opacity hover:opacity-100"
-          >
-            <FontAwesomeIcon icon={faTwitter} />{" "}
-            {/* Replace svg with FontAwesomeIcon */}
-          </Typography>
-        </div>
       </div>
     </footer>
   );
