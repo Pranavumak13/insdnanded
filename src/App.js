@@ -20,7 +20,7 @@ const Home = () => {
       <Announcements />
       <span id="about"></span>
       <About />
-      <span id="courses"></span>
+      <span id="Courses"></span>
       <Courses />
       <Events />
       <Awards />
