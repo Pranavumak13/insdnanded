@@ -85,6 +85,35 @@
     width: 45vw;
   }
   .courses-list button {
+    width: 120px;
+    padding: 6px 30px;
+  }
+  .courses-list .lower {
+    margin-top: 80px;
+  }
+  .courses-data {
+    margin-top: 0px;
+    width: 500px;
+    margin-left: 30px;
+  }
+  .courses-icon {
+    font-size: 60px;
+  }
+
+  .courses-name {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .courses-container {
+    flex-direction: row;
+  }
+  .courses-list {
+    margin-right: 30px;
+    width: 45vw;
+  }
+  .courses-list button {
     width: 200px;
     padding: 10px 50px;
   }
