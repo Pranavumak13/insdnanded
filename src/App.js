@@ -11,11 +11,11 @@ import Recruiters from "./Components/Recruiters";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 
-function App() {
+import { Routes, Route, Link } from "react-router-dom";
+
+const Home = () => {
   return (
     <>
-      <span id="home"></span>
-      <Navbar />
       <Popup />
       <Announcements />
       <span id="about"></span>
@@ -28,6 +28,40 @@ function App() {
       <span id="contact"></span>
       <Contact />
       <Footer />
+    </>
+  );
+};
+
+function App() {
+  return (
+    <>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <span id="home"></span>
+              <Navbar />
+              <Home />
+            </>
+          }
+        ></Route>
+        <Route
+          path="/:id"
+          element={
+            <div style={{ marginLeft: "80px" }}>
+              <h1>Page not found :(</h1>
+              <p>
+                Go to the{" "}
+                <span style={{ color: "#00f" }}>
+                  <Link to="/">homepage</Link>
+                </span>
+                .
+              </p>
+            </div>
+          }
+        ></Route>
+      </Routes>
     </>
   );
 }
