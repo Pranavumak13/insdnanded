@@ -9,6 +9,8 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 
+import Brochure from "../assets/CourseBrochure.pdf";
+
 const currentYear = new Date().getFullYear();
 
 const FooterLink = (props) => {
@@ -84,7 +86,16 @@ export default function Footer() {
               <FooterLink name="About Us" linkto="#about" />
               <FooterLink name="Events" linkto="#events" />
               <FooterLink name="Awards" linkto="#awards" />
-              <FooterLink name="Brouchure" linkto="" />
+              <li>
+                <Typography
+                  as="a"
+                  href={Brochure}
+                  color="white"
+                  className="py-1.5 font-normal transition-colors hover:text-blue-600 "
+                >
+                  Brochure
+                </Typography>
+              </li>
             </ul>
           </div>
 
