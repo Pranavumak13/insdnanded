@@ -22,7 +22,9 @@ const Home = () => {
       <About />
       <span id="Courses"></span>
       <Courses />
+      <span id="events"></span>
       <Events />
+      <span id="awards"></span>
       <Awards />
       <Recruiters />
       <span id="contact"></span>
