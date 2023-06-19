@@ -9,20 +9,24 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 
-const LINKS = [
-  {
-    items: [
-      "Home",
-      "About us",
-      "Courses",
-      "Brochure",
-      "Testimonial",
-      "Support",
-    ],
-  },
-];
-
 const currentYear = new Date().getFullYear();
+
+const FooterLink = (props) => {
+  return (
+    <>
+      <li>
+        <Typography
+          as="a"
+          href={props.linkto}
+          color="white"
+          className="py-1.5 font-normal transition-colors hover:text-blue-600 "
+        >
+          {props.name}
+        </Typography>
+      </li>
+    </>
+  );
+};
 
 export default function Footer() {
   return (
@@ -35,21 +39,16 @@ export default function Footer() {
             <img
               src="/LOGO3.png"
               alt="INSD Nanded"
-              className="w-60 h-auto"
+              className="w-60 flex self-center h-auto ml-8 mr-16 md:self-start"
               style={{
                 paddingTop: "22px",
-                marginLeft: "80px",
-                marginRight: "62px",
               }}
             />
             <p
               className="text-white text-xs self-center"
               style={{
                 width: "90%",
-                marginTop: "25px",
-                // textAlign: "start",
-                marginLeft: "80px",
-                color: "#E7DBCE",
+                marginTop: "50px",
                 fontFamily: "Inter",
                 fontStyle: "normal",
                 fontWeight: "400",
@@ -71,44 +70,39 @@ export default function Footer() {
                 // },
               }}
             >
-              <h6>At INSD, Nanded we strongly believe in providing quality education <br /> by setting high academic standards and providing hands-on <br /> learning experiences to its students.</h6>
+              <h6>
+                At INSD, Nanded we strongly believe in providing quality
+                education by setting high academic standards and providing
+                hands-on learning experiences to its students.
+              </h6>
             </p>
           </div>
 
           <div className="grid grid-cols-1 text-center  md:grid-cols-1 justify-between gap-3 md:ml-40  md:text-left">
-            {LINKS.map(({ items }) => (
-              <ul className="mb-6" style={{ alignItems: "center" }}>
-                <Typography
-                  variant="small"
-                  color="white"
-                  className="mb-3 font-medium opacity-40"
-                ></Typography>
-                {items.map((link) => (
-                  <li key={link}>
-                    <Typography
-                      as="a"
-                      href="#"
-                      color="white"
-                      className="py-1.5 font-normal transition-colors hover:text-blue-600 "
-                    >
-                      {link}
-                    </Typography>
-                  </li>
-                ))}
-              </ul>
-            ))}
+            <ul className="mb-6" style={{ alignItems: "center" }}>
+              <FooterLink name="Home" linkto="#home" />
+              <FooterLink name="About Us" linkto="#about" />
+              <FooterLink name="Events" linkto="#events" />
+              <FooterLink name="Awards" linkto="#awards" />
+              <FooterLink name="Brouchure" linkto="" />
+            </ul>
           </div>
 
           <div className="text-black" style={{ color: "#E7DBCE" }}>
             <h1 className="text-white">Contact Us</h1>
-            <p style={{ paddingTop: "20px", paddingBottom: "20px" }}>
+            <p
+              className="text-white"
+              style={{ paddingTop: "20px", paddingBottom: "20px" }}
+            >
               {" "}
-              1st Floor, Bhagwati plaza, <br /> Beside Union Bank,Ashok Nagar, <br /> Bhagya Nagar Road, <br /> Nanded.
+              1st Floor, Bhagwati plaza, <br /> Beside Union Bank,Ashok Nagar,{" "}
+              <br /> Bhagya Nagar Road, <br /> Nanded.
               <br />
               <br />
               +91-8605431313, 9665070493
-              <br /><br />
-              <div className="flex gap-4 text-white sm:justify-start">
+              <br />
+              <br />
+              <div className="flex justify-center gap-4 text-white sm:justify-start">
                 <Typography
                   as="a"
                   href="https://www.instagram.com/insdnanded/?igshid=NTc4MTIwNjQ2YQ%3D%3D"
@@ -195,7 +189,7 @@ export default function Footer() {
         style={{
           background:
             "linear-gradient(90deg, rgba(233,68,132,1) 0%, rgba(230,143,92,1) 100%)",
-            alignItems:"center"
+          alignItems: "center",
         }}
       >
         <Typography
