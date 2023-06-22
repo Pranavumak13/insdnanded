@@ -41,13 +41,12 @@ const Regi2 = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         "service_hk6g79n",
         "template_2skh8fm",
         form.current,
-        "IjXiPfw_F9L44p2QZ"
+        process.env.REACT_APP_PUBLIC_KEY
       )
       .then(
         (result) => {
