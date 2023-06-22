@@ -10,6 +10,8 @@ import Awards from "./Components/Awards";
 import Recruiters from "./Components/Recruiters";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
+import { Analytics } from '@vercel/analytics/react';
+
 
 import { Routes, Route, Link } from "react-router-dom";
 
@@ -45,6 +47,7 @@ function App() {
               <span id="home"></span>
               <Navbar />
               <Home />
+              <Analytics />  {/* Vercel Analytics  */}
             </>
           }
         ></Route>

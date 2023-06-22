@@ -54,7 +54,7 @@ const Regi2 = () => {
           console.log(result.text);
         },
         (error) => {
-          console.log("Error")
+          alert("Error while sending the message")
           console.log(error.text);
         }
       );
