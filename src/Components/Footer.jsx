@@ -8,6 +8,11 @@ import {
   faTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+import {
+  faLocationDot,
+  faPhone,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
 
 import Brochure from "../assets/CourseBrochure.pdf";
 
@@ -101,17 +106,47 @@ export default function Footer() {
 
           <div className="text-black" style={{ color: "#E7DBCE" }}>
             <h1 className="text-white">Contact Us</h1>
-            <p
+            <div
               className="text-white"
               style={{ paddingTop: "20px", paddingBottom: "20px" }}
             >
-              {" "}
-              1st Floor, Bhagwati plaza, <br /> Beside Union Bank,Ashok Nagar,{" "}
-              <br /> Bhagya Nagar Road, <br /> Nanded.
-              <br />
-              <br />
-              +91-8605431313, 9665070493
-              <br />
+              <ul>
+                <li
+                  className="flex text-left justify-center md:justify-start"
+                  style={{
+                    alignItems: "baseline",
+                    gap: "10px",
+                  }}
+                >
+                  <FontAwesomeIcon
+                    icon={faLocationDot}
+                    style={{ fontSize: "18px" }}
+                  />
+                  1st Floor, Bhagwati plaza,
+                  <br />
+                  Beside Union Bank, Ashok Nagar,
+                  <br />
+                  Bhagya Nagar Road,
+                  <br />
+                  Nanded.
+                </li>
+                <br />
+                <li className="flex text-left justify-center md:text-center md:justify-start" >
+                  <FontAwesomeIcon
+                    icon={faPhone}
+                    style={{ marginRight: "10px" }}
+                  />
+                  +91-8605431313, 9665070493
+                </li>
+                <br />
+                <li className="flex text-left justify-center md:text-center md:justify-start" >
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    style={{ marginRight: "10px" }}
+                  />
+                  info@insdnanded.com
+                </li>
+              </ul>
               <br />
               <div className="flex justify-center gap-4 text-white sm:justify-start">
                 <Typography
@@ -146,7 +181,7 @@ export default function Footer() {
 
                 <Typography
                   as="a"
-                  href="https://www.linkedin.com"
+                  href="https://www.linkedin.com/in/insd-nanded-609935276"
                   target="_blank"
                   className="opacity-80 transition-opacity hover:opacity-100"
                 >
@@ -164,7 +199,7 @@ export default function Footer() {
                   {/* Replace svg with FontAwesomeIcon */}
                 </Typography>
               </div>
-            </p>
+            </div>
             {/* <input
               type="email"
               placeholder="email@email.com"
