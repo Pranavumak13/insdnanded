@@ -3,7 +3,6 @@ import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import Tbox from "./Contact2";
 import "./Contact.css";
-import Button from "./Button";
 
 const Regi2 = () => {
   const [name, setName] = useState(null);
@@ -32,10 +31,10 @@ const Regi2 = () => {
     setChoice(e.target.value);
   };
 
-  const submitHandler = () => {
-    console.log("73");
-    // Forward to db
-  };
+  // const submitHandler = () => {
+  //   console.log("73");
+  //   // Forward to db
+  // };
 
   const form = useRef();
 
@@ -54,13 +53,13 @@ const Regi2 = () => {
           console.log(result.text);
         },
         (error) => {
-          alert("Error while sending the message")
+          alert("Error while sending the message");
           console.log(error.text);
         }
       );
   };
 
-  let Ddate = new Date("June 28, 2023 00:00:00").getTime();
+  let Ddate = new Date("July 08, 2023 00:00:00").getTime();
 
   const setTime = () => {
     let getDate = new Date();
@@ -134,13 +133,15 @@ const Regi2 = () => {
                     value={choice}
                     required
                   >
-                   <option value="" disabled hidden>
+                    <option value="" disabled hidden>
                       Select a course
                     </option>
                     <option value="Fashion Design">Fashion Designing</option>
                     <option value="Interior Desgin">Interior Designing</option>
                     <option value="Textile Design">Textile Designing</option>
-                    <option value="Jewellery Design">Jewellery Designing</option>
+                    <option value="Jewellery Design">
+                      Jewellery Designing
+                    </option>
                     <option value="Graphic Design">Graphic Designing</option>
                     <option value="Animation & VFC">Animation & VFX</option>
                     <option value="Photography">Photography</option>
@@ -150,7 +151,8 @@ const Regi2 = () => {
                   <button
                     type="submit"
                     className="border-none rounded-xl outline-none bg-gradient-to-r from-[#E94484] to-[#E68F5C] w-full py-4 text-white mt-5"
-                  >Submit
+                  >
+                    Submit
                   </button>
                 </form>
               </div>
