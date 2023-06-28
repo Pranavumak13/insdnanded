@@ -14,8 +14,6 @@ npx create-react-app my-ap
 ```sh
 npm init react-app my-app
 ```
-npm init <initializer> is available in npm 6+
-
 ## Yarn
 
 ```sh
@@ -55,8 +53,11 @@ cd my-app
 
 Inside the newly created project, you can run some built-in commands:
 
+```sh
 npm start or yarn start
-It runs the app in development mode. Open http://localhost:3000 to view it in the browser.
+```
+It runs the app in development mode. 
+Open http://localhost:3000 to view it in the browser.
 
 The page will automatically reload if you make changes to the code. You will see the build errors and lint warnings in the console.
 
