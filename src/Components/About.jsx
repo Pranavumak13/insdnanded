@@ -7,6 +7,7 @@ function About() {
 
   const renderData = () => {
     if (selectedSection === "wwd") {
+      //wwd-?
       return (
         <>
           {/* <h1>About Us</h1> <br /> */}
@@ -23,6 +24,7 @@ function About() {
         </>
       );
     } else if (selectedSection === "om") {
+      //our mission
       return (
         <>
           {/* <h1>Our Mission</h1> */}
@@ -43,6 +45,7 @@ function About() {
         </>
       );
     } else if (selectedSection === "og") {
+      // og- our goal
       return (
         <>
           {/* <h1>Uniqueness</h1> */}
@@ -63,7 +66,7 @@ function About() {
   return (
     <div className="about-container">
       <div className="about-img">
-        <img src={TestImg} />
+        <img src={TestImg} alt="About INSDNanded" />
       </div>
       <div className="about-content">
         <div className="about-list">

@@ -42,7 +42,7 @@ export default function Footer() {
       <div className="mx-auto w-full bg-black" style={{ padding: 25 }}>
         {" "}
         <div className="grid grid-cols-1 text-center md:grid-cols-3 justify-between md:text-left">
-          <div className="mb-6 flex flex-col justify-center">
+          <div className="mb-6 flex flex-col justify-start">
             <img
               src="/LOGO3.png"
               alt="INSD Nanded"
@@ -131,7 +131,7 @@ export default function Footer() {
                   Nanded.
                 </li>
                 <br />
-                <li className="flex text-left justify-center md:text-center md:justify-start" >
+                <li className="flex text-left justify-center md:text-center md:justify-start">
                   <FontAwesomeIcon
                     icon={faPhone}
                     style={{ marginRight: "10px" }}
@@ -139,7 +139,7 @@ export default function Footer() {
                   +91-8605431313, 9665070493
                 </li>
                 <br />
-                <li className="flex text-left justify-center md:text-center md:justify-start" >
+                <li className="flex text-left justify-center md:text-center md:justify-start">
                   <FontAwesomeIcon
                     icon={faEnvelope}
                     style={{ marginRight: "10px" }}
@@ -244,7 +244,7 @@ export default function Footer() {
           className="mb-4 text-center font-normal md:mb-0"
         >
           &copy; {currentYear} INSDnanded |
-          <a href="#"> Web Development By Team APJ</a>
+          <a href="#home"> Web Development By Team APJ</a>
         </Typography>
       </div>
     </footer>
