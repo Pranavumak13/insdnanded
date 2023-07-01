@@ -1,8 +1,11 @@
 export const fashion = {
-  Diploma: {
+  diploma: {
     diploma_basic: {
-      "Year One": {
-        "Semester One": {
+      name: "Diploma",
+      fy: {
+        name: "Year One",
+        sem1: {
+          name: "Semester One",
           subjects: [
             "Elements of Design",
             "Fashion Industrial Language",
@@ -13,7 +16,8 @@ export const fashion = {
           ],
           credits: 20,
         },
-        "Semester Two": {
+        sem2: {
+          name: "Semester Two",
           subjects: [
             "Fashion Illustration",
             "Different body drape elements a function of clothing",
@@ -27,8 +31,11 @@ export const fashion = {
       },
     },
     diploma_adv: {
-      "Year One": {
-        "Semester One": {
+      name: "Advanced Diploma",
+      fy: {
+        name: "Year One",
+        sem1: {
+          name: "Semester One",
           subjects: [
             "Foundation Art",
             "Elements of principle of fashion design",
@@ -38,7 +45,8 @@ export const fashion = {
           ],
           credits: 20,
         },
-        "Semester Two": {
+        sem2: {
+          name: "Semester Two",
           subjects: [
             "History of the western world fashion",
             "Introduction to textile",
@@ -50,8 +58,10 @@ export const fashion = {
           credits: 20,
         },
       },
-      "Year Two": {
-        "Semester Three": {
+      sy: {
+        name: "Year Two",
+        sem3: {
+          name: "Semester Three",
           subjects: [
             "Introduction to fashion illustration",
             "Sewing Technology",
@@ -62,7 +72,8 @@ export const fashion = {
           ],
           credits: 20,
         },
-        "Semester Four": {
+        sem4: {
+          name: "Semester Four",
           subjects: [
             "Garment Construction",
             "Sewing Technology part – II",
@@ -75,8 +86,11 @@ export const fashion = {
       },
     },
     diploma_ug: {
-      "Year One": {
-        "Semester One": {
+      name: "Diploma Undergraduate",
+      fy: {
+        name: "Year One",
+        sem1: {
+          name: "Semester One",
           subjects: [
             "Foundation Art",
             "Introduction to pattern making",
@@ -87,7 +101,8 @@ export const fashion = {
           ],
           credits: 20,
         },
-        "Semester Two": {
+        sem2: {
+          name: "Semester Two",
           subjects: [
             "Design Foundation",
             "Introduction to textile",
@@ -99,8 +114,10 @@ export const fashion = {
           credits: 20,
         },
       },
-      "Year Two": {
-        "Semester Three": {
+      sy: {
+        name: "Year Two",
+        sem3: {
+          name: "Semester Three",
           subjects: [
             "Adv. Fashion illustration",
             "Introduction to draping",
@@ -111,7 +128,8 @@ export const fashion = {
           ],
           credits: 20,
         },
-        "Semester Four": {
+        sem4: {
+          name: "Semester Four",
           subjects: [
             "Apparel design",
             "Theory of dyeing",
@@ -123,8 +141,10 @@ export const fashion = {
           credits: 20,
         },
       },
-      "Year Three": {
-        "Semester Five": {
+      ty: {
+        name: "Year Three",
+        sem5: {
+          name: "Semester Five",
           subjects: [
             "Fashion Analysis",
             "Quality control",
@@ -135,7 +155,8 @@ export const fashion = {
           ],
           credits: 20,
         },
-        "Semester Six": {
+        sem6: {
+          name: "Semester Six",
           subjects: [
             "Advance Fashion Illustration - II",
             "Surface Ornamentation",
@@ -149,8 +170,11 @@ export const fashion = {
       },
     },
     diploma_pg: {
-      "Year One": {
-        "Semester One": {
+      name: "Diploma Postgraduate",
+      fy: {
+        name: "Year One",
+        sem1: {
+          name: "Semester One",
           subjects: [
             "Basics of Designing",
             "Pattern Making Techniques",
@@ -160,7 +184,8 @@ export const fashion = {
           ],
           credits: 20,
         },
-        "Semester Two": {
+        sem2: {
+          name: "Semester Two",
           subjects: [
             "Fashion Foundation",
             "Textile Theory",
@@ -171,8 +196,10 @@ export const fashion = {
           credits: 20,
         },
       },
-      "Year Two": {
-        "Semester Three": {
+      sy: {
+        name: "Year Two",
+        sem3: {
+          name: "Semester Three",
           subjects: [
             "Advance Fashion Illustration",
             "Advance Draping",
@@ -182,7 +209,8 @@ export const fashion = {
           ],
           credits: 20,
         },
-        "Semester Four": {
+        sem4: {
+          name: "Semester Four",
           subjects: [
             "Quality Control Technology",
             "Dyeing & Printing",
