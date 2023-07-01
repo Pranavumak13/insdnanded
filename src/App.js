@@ -12,12 +12,11 @@ import Awards from "./Components/Awards";
 import Recruiters from "./Components/Recruiters";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 
 // COURSES IMPORT
 import ButtonData from "./Components/Multipage/Courses/ButtonData";
-
-
+import { fashion, interior } from "./Components/Multipage/Courses/CoursesData";
 
 import { Routes, Route, Link } from "react-router-dom";
 
@@ -46,10 +45,11 @@ const Home = () => {
 const FashionDesign = (props) => {
   return (
     <>
-      <ButtonData />
+      {/* FORM & LIST */}
+      <ButtonData dataobj={fashion} />
     </>
   );
-}
+};
 
 function App() {
   return (
@@ -63,19 +63,45 @@ function App() {
               <span id="home"></span>
               <Routes>
                 <Route path="/" element={<Home />}></Route>
-                <Route path="/courses/fashiondesign" element={<FashionDesign data="sample data 2" />} ></Route>
-                <Route path="/courses/interiordesign" element={<>Interior</>} ></Route>
-                <Route path="/courses/textiledesign" element={<>Textile</>} ></Route>
-                <Route path="/courses/jewellerydesign" element={<>Jewellery</>} ></Route>
-                <Route path="/courses/graphicdesign" element={<>Graphics</>} ></Route>
-                <Route path="/courses/animation_VFX_design" element={<>Animation and VFX</>} ></Route>
-                <Route path="/courses/photographydesign" element={<>Photography</>} ></Route>
-                <Route path="/courses/beautyhairdesign" element={<>Beauty and Hair</>} ></Route>
+                <Route
+                  path="/courses/fashiondesign"
+                  element={<FashionDesign data="sample data 2" />}
+                ></Route>
+                <Route
+                  path="/courses/interiordesign"
+                  element={<>Interior</>}
+                ></Route>
+                <Route
+                  path="/courses/textiledesign"
+                  element={<>Textile</>}
+                ></Route>
+                <Route
+                  path="/courses/jewellerydesign"
+                  element={<>Jewellery</>}
+                ></Route>
+                <Route
+                  path="/courses/graphicdesign"
+                  element={<>Graphics</>}
+                ></Route>
+                <Route
+                  path="/courses/animation_VFX_design"
+                  element={<>Animation and VFX</>}
+                ></Route>
+                <Route
+                  path="/courses/photographydesign"
+                  element={<>Photography</>}
+                ></Route>
+                <Route
+                  path="/courses/beautyhairdesign"
+                  element={<>Beauty and Hair</>}
+                ></Route>
                 <Route
                   path="/:id"
                   element={
                     <div style={{ marginLeft: "80px" }}>
-                      <h1>Error 404 !! <br /> Page not found :(</h1>
+                      <h1>
+                        Error 404 !! <br /> Page not found :(
+                      </h1>
                       <p>
                         Go to the{" "}
                         <span style={{ color: "#00f" }}>
@@ -85,10 +111,9 @@ function App() {
                       </p>
                     </div>
                   }
-                >
-                </Route>
+                ></Route>
               </Routes>
-              <Analytics />  {/* Vercel Analytics  */}
+              <Analytics /> {/* Vercel Analytics  */}
               <Footer />
             </>
           }

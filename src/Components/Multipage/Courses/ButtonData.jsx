@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import "./ButtonData.css";
 
-function ButtonData() {
+function ButtonData(props) {
   const [selectedSection, setSelectedSection] = useState("dip");
   const [selectedSubsection, setSelectedSubsection] = useState("");
 
@@ -168,16 +169,71 @@ function ButtonData() {
   };
 
   //Data
-  const Data = () => {
+  const Data = (props) => {
     const [selectedYear, setSelectedYear] = useState();
+    const currentdata = props.dataobj;
+    let yearNum = 0;
 
-    return <>Data</>;
+    const renderSubjects = () => {
+      if (selectedYear == "Year One") {
+        yearNum = 0;
+      } else if (selectedYear == "Year Two") {
+        yearNum = 1;
+      }
+
+      return (
+        <div className="data-grid">
+          <div className="data-header">
+            {currentdata.diploma.diploma_adv.years[yearNum].sem1.name}
+          </div>
+          <div className="data-header">
+            {currentdata.diploma.diploma_adv.years[yearNum].sem2.name}
+          </div>
+          {/* Sem 1 */}{" "}
+          <div className="data-subject">
+            {currentdata.diploma.diploma_adv.years[yearNum].sem1.subjects.map(
+              (i) => {
+                return <div>{i}</div>;
+              }
+            )}
+          </div>
+          {/* Sem 2 */}
+          <div className="data-subject">
+            {currentdata.diploma.diploma_adv.years[yearNum].sem2.subjects.map(
+              (i) => {
+                return <div>{i}</div>;
+              }
+            )}
+          </div>
+        </div>
+      );
+    };
+
+    return (
+      <>
+        <h1>{currentdata.diploma.diploma_adv.name}</h1>
+        <div className="data-buttons">
+          {currentdata.diploma.diploma_adv.years.map((i) => {
+            return (
+              <button
+                onClick={() => {
+                  setSelectedYear(i.name);
+                }}
+              >
+                {i.name}
+              </button>
+            );
+          })}
+        </div>
+        <div className="data-container">{renderSubjects()}</div>
+      </>
+    );
   };
 
   return (
     <>
       <Buttons />
-      <Data />
+      <Data dataobj={props.dataobj} />
     </>
   );
 }
