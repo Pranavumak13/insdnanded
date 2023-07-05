@@ -12,6 +12,7 @@
   background-color: yellow;
   flex: 1;
   width: 100%;
+  overflow: hidden;
   transition: all 1s;
 }
 
@@ -29,8 +30,6 @@
 .coursesubbtn-active {
   flex: 0.6;
   grid-template-rows: 1fr;
-  flex-direction: column;
-  justify-content: space-around;
 }
 
 .coursesubbtn-inner {
@@ -44,16 +43,113 @@
   background-color: greenyellow;
 }
 
+@media only screen and (min-width: 786px) {
+  .coursebtn-container {
+    flex-direction: row;
+    height: 50vh;
+  }
+  .coursebtn {
+    height: 100%;
+    flex: auto;
+    width: 40wv;
+  }
+  .coursebtn-active {
+    width: 10vw;
+    flex: auto;
+  }
+  .coursebtn p {
+    transition: all 1s;
+  }
+  .coursebtn-active p {
+    font-size: 50px;
+    transform: translateY(2em) rotate(-90deg);
+  }
+  .coursesubbtn {
+    grid-template-rows: auto;
+    grid-template-columns: 0fr;
+    height: 100%;
+    flex: auto;
+  }
+  .coursesubbtn-active {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+  }
+  .coursesubbtn button {
+    width: 60vw;
+  }
+}
+
 /* Data styling */
-.data-container {
-  width: 100vw;
+.course-data {
+  margin-top: 32px;
+  margin-bottom: 64px;
+}
+
+.data-title {
+  padding: 0px 8px;
+}
+
+.data-title h1 {
+  font-size: 28px;
+}
+
+.data-yearbtn {
+  margin: 4px 8px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.data-container {
+  margin: 4px 8px;
 }
 
 .data-grid {
-  background-color: red;
+  background-color: #ddd;
   display: grid;
   grid-template-columns: auto auto;
+}
+
+.data-grid div {
+  width: 49vw;
+}
+
+.data-grid div div {
+  padding: 4px;
+  height: 72px;
+  border: 1px solid #fff;
+}
+
+.data-gridhead {
+  font-weight: bold;
+  height: fit-content !important;
+  text-align: center;
+}
+
+@media only screen and (min-width: 786px) {
+  .course-data {
+    max-width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .data-yearbtn {
+    width: fit-content;
+  }
+  .data-yearbtn button {
+    padding: 8px 16px;
+    margin: 0px 8px;
+    border-radius: 16px;
+  }
+  .data-yearbtn button:hover {
+    box-shadow: 0px 0px 4px #000a;
+  }
+  .data-grid {
+    width: 60vw;
+    margin: auto;
+  }
+  .data-grid div {
+    width: 30vw;
+  }
+  .data-grid div div {
+    padding: 16px;
+  }
 }

@@ -7,12 +7,8 @@ function ButtonData(props) {
 
   //Buttons
   const Buttons = () => {
-    const [isSubOpen, setIsSubOpen] = useState(false);
     const [currentObject, setCurrentObject] = useState({});
-
-    const SubButton = (props) => {
-      return <></>;
-    };
+    const [isSubOpen, setIsSubOpen] = useState(false);
 
     return (
       <>
@@ -21,15 +17,20 @@ function ButtonData(props) {
           <button
             className={isSubOpen ? "coursebtn coursebtn-active" : "coursebtn"}
             onClick={() => {
-              setCurrentObject(currentCourse.diploma);
-              setIsSubOpen(true);
+              if (currentObject === currentCourse.diploma) {
+                setIsSubOpen(false);
+                setCurrentObject({});
+              } else {
+                setIsSubOpen(true);
+                setCurrentObject(currentCourse.diploma);
+              }
             }}
           >
-            Diploma
+            <p>Diploma</p>
           </button>
           <div
             className={
-              currentObject == currentCourse.diploma
+              currentObject == currentCourse.diploma && isSubOpen
                 ? "coursesubbtn coursesubbtn-active"
                 : "coursesubbtn"
             }
@@ -52,15 +53,20 @@ function ButtonData(props) {
           <button
             className={isSubOpen ? "coursebtn coursebtn-active" : "coursebtn"}
             onClick={() => {
-              setCurrentObject(currentCourse.bachelors);
-              setIsSubOpen(true);
+              if (currentObject === currentCourse.bachelors) {
+                setIsSubOpen(false);
+                setCurrentObject({});
+              } else {
+                setIsSubOpen(true);
+                setCurrentObject(currentCourse.bachelors);
+              }
             }}
           >
             Bachelor's
           </button>
           <div
             className={
-              currentObject == currentCourse.bachelors
+              currentObject == currentCourse.bachelors && isSubOpen
                 ? "coursesubbtn coursesubbtn-active"
                 : "coursesubbtn"
             }
@@ -83,15 +89,20 @@ function ButtonData(props) {
           <button
             className={isSubOpen ? "coursebtn coursebtn-active" : "coursebtn"}
             onClick={() => {
-              setCurrentObject(currentCourse.masters);
-              setIsSubOpen(true);
+              if (currentObject === currentCourse.masters) {
+                setIsSubOpen(false);
+                setCurrentObject({});
+              } else {
+                setIsSubOpen(true);
+                setCurrentObject(currentCourse.masters);
+              }
             }}
           >
             Master's
           </button>
           <div
             className={
-              currentObject == currentCourse.masters
+              currentObject == currentCourse.masters && isSubOpen
                 ? "coursesubbtn coursesubbtn-active"
                 : "coursesubbtn"
             }
@@ -130,8 +141,18 @@ function ButtonData(props) {
   const Data = () => {
     const [selectedYear, setSelectedYear] = useState(0);
 
+    const renderTitle = () => {
+      return (
+        <div className="data-title">
+          <h1>{currentSubObject.name}</h1>
+        </div>
+      );
+    };
+
     return (
-      <>
+      <div className="course-data">
+        {renderTitle()}
+        {/* Year Buttons */}
         <div className="data-yearbtn">
           {currentSubObject ? (
             currentSubObject.years.map((i, index) => {
@@ -149,25 +170,32 @@ function ButtonData(props) {
             <></>
           )}
         </div>
+        {/* Subject Table */}
         <div className="data-container">
           {currentSubObject ? (
             <div className="data-grid">
               <div>
+                <div className="data-gridhead">
+                  {currentSubObject.years[selectedYear].sem1.name}
+                </div>
                 {currentSubObject.years[selectedYear].sem1.subjects.map((i) => {
                   return <div>{i}</div>;
                 })}
               </div>
               <div>
+                <div className="data-gridhead">
+                  {currentSubObject.years[selectedYear].sem2.name}
+                </div>
                 {currentSubObject.years[selectedYear].sem2.subjects.map((i) => {
                   return <div>{i}</div>;
                 })}
               </div>
             </div>
           ) : (
-            <></>
+            <>Select a Course</>
           )}
         </div>
-      </>
+      </div>
     );
   };
 
