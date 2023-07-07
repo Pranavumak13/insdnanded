@@ -16,7 +16,8 @@ import { Analytics } from "@vercel/analytics/react";
 
 // COURSES IMPORT
 import ButtonData from "./Components/Multipage/Courses/ButtonData";
-import { fashion, interior } from "./Components/Multipage/Courses/CoursesData";
+import { fashion } from "./Components/Multipage/Courses/CoursesData";
+import { graphic, textile } from "./Components/Multipage/Courses/CoursesData13";
 
 import { Routes, Route, Link } from "react-router-dom";
 
@@ -51,6 +52,24 @@ const FashionDesign = (props) => {
   );
 };
 
+const GraphicDesign = (props) => {
+  return (
+    <>
+      {/* FORM & LIST */}
+      <ButtonData dataobj={graphic} />
+    </>
+  );
+};
+
+const TextileDesign = (props) => {
+  return (
+    <>
+      {/* FORM & LIST */}
+      <ButtonData dataobj={textile} />
+    </>
+  );
+};
+
 function App() {
   return (
     <>
@@ -73,7 +92,7 @@ function App() {
                 ></Route>
                 <Route
                   path="/courses/textiledesign"
-                  element={<>Textile</>}
+                  element={<TextileDesign />}
                 ></Route>
                 <Route
                   path="/courses/jewellerydesign"
@@ -81,7 +100,7 @@ function App() {
                 ></Route>
                 <Route
                   path="/courses/graphicdesign"
-                  element={<>Graphics</>}
+                  element={<GraphicDesign />}
                 ></Route>
                 <Route
                   path="/courses/animation_VFX_design"
