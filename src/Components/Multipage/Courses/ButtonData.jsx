@@ -30,7 +30,7 @@ function ButtonData(props) {
           </button>
           <div
             className={
-              currentObject == currentCourse.diploma && isSubOpen
+              currentObject === currentCourse.diploma && isSubOpen
                 ? "coursesubbtn coursesubbtn-active"
                 : "coursesubbtn"
             }
@@ -66,7 +66,7 @@ function ButtonData(props) {
           </button>
           <div
             className={
-              currentObject == currentCourse.bachelors && isSubOpen
+              currentObject === currentCourse.bachelors && isSubOpen
                 ? "coursesubbtn coursesubbtn-active"
                 : "coursesubbtn"
             }
@@ -102,7 +102,7 @@ function ButtonData(props) {
           </button>
           <div
             className={
-              currentObject == currentCourse.masters && isSubOpen
+              currentObject === currentCourse.masters && isSubOpen
                 ? "coursesubbtn coursesubbtn-active"
                 : "coursesubbtn"
             }
