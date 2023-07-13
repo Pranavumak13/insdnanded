@@ -1,10 +1,10 @@
 import emailjs from "@emailjs/browser";
 import React, { useState, useEffect } from "react";
 import { useRef } from "react";
-import "./Form.css";
-import gradientImage from "../Utilities/final.jpg";
+import "./Fashion.css";
+import gradientImage from "../img/final.jpg";
 
-function Form() {
+function Fashion() {
   const [name, setName] = useState(null);
   const [phone, setPhone] = useState(null);
   const [email, setEmail] = useState(null);
@@ -198,4 +198,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default Fashion;
