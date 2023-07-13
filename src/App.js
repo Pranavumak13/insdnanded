@@ -11,6 +11,7 @@ import Events from "./Components/Events";
 import Awards from "./Components/Awards";
 import Recruiters from "./Components/Recruiters";
 import Contact from "./Components/Contact";
+import Form from "./Components/Utilities/Form";
 import Footer from "./Components/Footer";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -28,6 +29,7 @@ const Home = () => {
       <Announcements />
       <span id="about"></span>
       <About />
+      <Form/>
       <span id="Courses"></span>
       <Courses />
       <span id="events"></span>
