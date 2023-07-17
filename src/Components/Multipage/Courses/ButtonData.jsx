@@ -4,7 +4,6 @@ import "./ButtonData.css";
 function ButtonData(props) {
   const currentCourse = props.dataobj;
   const [currentSubObject, setCurrentSubObject] = useState(false);
-
   //Buttons
   const Buttons = () => {
     const [currentObject, setCurrentObject] = useState({});

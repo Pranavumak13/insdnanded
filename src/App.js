@@ -12,14 +12,12 @@ import Awards from "./Components/Awards";
 import Recruiters from "./Components/Recruiters";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
-import Form from "./Components/Utilities/Form"
+import Form from "./Components/Multipage/Utilities/Form"
 import { Analytics } from "@vercel/analytics/react";
 
 // COURSES IMPORT
 import ButtonData from "./Components/Multipage/Courses/ButtonData";
-import { fashion } from "./Components/Multipage/Courses/CoursesData";
-import { graphic, textile } from "./Components/Multipage/Courses/CoursesData13";
-
+import { fashion, interior, graphic, textile, animaton, jwellery } from "./Components/Multipage/Courses/CoursesData";
 import { Routes, Route, Link } from "react-router-dom";
 
 // HOMEPAGE
@@ -30,7 +28,6 @@ const Home = () => {
       <Announcements />
       <span id="about"></span>
       <About />
-      <Form/>
       <span id="Courses"></span>
       <Courses />
       <span id="events"></span>
@@ -72,6 +69,33 @@ const TextileDesign = (props) => {
   );
 };
 
+const InteriorDesign = (props) => {
+  return (
+    <>
+      {/* FORM & LIST */}
+      <ButtonData dataobj={interior} />
+    </>
+  );
+};
+
+const AnimationDesign = (props) => {
+  return (
+    <>
+      {/* FORM & LIST */}
+      <ButtonData dataobj={animaton} />
+    </>
+  );
+};
+
+const JewelleryDesign = (props) => {
+  return (
+    <>
+      {/* FORM & LIST */}
+      <ButtonData dataobj={jwellery} />
+    </>
+  );
+};
+
 function App() {
   return (
     <>
@@ -86,35 +110,35 @@ function App() {
                 <Route path="/" element={<Home />}></Route>
                 <Route
                   path="/courses/fashiondesign"
-                  element={<FashionDesign data="sample data 2" />}
+                  element={<> <Form /> <FashionDesign data="sample data 2" /> </>}
                 ></Route>
                 <Route
                   path="/courses/interiordesign"
-                  element={<>Interior</>}
+                  element={<> <Form /> <InteriorDesign /> </>}
                 ></Route>
                 <Route
                   path="/courses/textiledesign"
-                  element={<TextileDesign />}
+                  element={<> <Form /> <TextileDesign /> </>}
                 ></Route>
                 <Route
                   path="/courses/jewellerydesign"
-                  element={<>Jewellery</>}
+                  element={<> <Form /> <JewelleryDesign /> </>}
                 ></Route>
                 <Route
                   path="/courses/graphicdesign"
-                  element={<GraphicDesign />}
+                  element={<> <Form /> <GraphicDesign /></>}
                 ></Route>
                 <Route
                   path="/courses/animation_VFX_design"
-                  element={<>Animation and VFX</>}
+                  element={<> <Form /> <AnimationDesign /></>}
                 ></Route>
                 <Route
                   path="/courses/photographydesign"
-                  element={<>Photography</>}
+                  element={<><Form /> <h1> Photography </h1></>}
                 ></Route>
                 <Route
                   path="/courses/beautyhairdesign"
-                  element={<>Beauty and Hair</>}
+                  element={<> <Form /> <h1> Beauty and Hair </h1></>}
                 ></Route>
                 <Route
                   path="/:id"

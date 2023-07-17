@@ -5,31 +5,31 @@ import Tbox from "./Contact2";
 import "./Contact.css";
 
 const Regi2 = () => {
-  const [name, setName] = useState(null);
-  const [phone, setPhone] = useState(null);
-  const [email, setEmail] = useState(null);
-  const [choice, setChoice] = useState(null);
+  // const [name, setName] = useState(null);
+  // const [phone, setPhone] = useState(null);
+  // const [email, setEmail] = useState(null);
+  // const [choice, setChoice] = useState(null);
 
   const [tday, setTday] = useState(null);
   const [thour, setThour] = useState(null);
   const [tmin, setTmin] = useState(null);
   const [tsec, setTsec] = useState(null);
 
-  const nameHandler = (e) => {
-    setName(e.target.value);
-  };
+  // const nameHandler = (e) => {
+  //   setName(e.target.value);
+  // };
 
-  const phoneHandler = (e) => {
-    setPhone(e.target.value);
-  };
+  // const phoneHandler = (e) => {
+  //   setPhone(e.target.value);
+  // };
 
-  const emailHandler = (e) => {
-    setEmail(e.target.value);
-  };
+  // const emailHandler = (e) => {
+  //   setEmail(e.target.value);
+  // };
 
-  const choiceHandler = (e) => {
-    setChoice(e.target.value);
-  };
+  // const choiceHandler = (e) => {
+  //   setChoice(e.target.value);
+  // };
 
   // const submitHandler = () => {
   //   console.log("73");
@@ -37,9 +37,11 @@ const Regi2 = () => {
   // };
 
   const form = useRef();
+  const [disabled, setDisabled] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setDisabled(true);
     emailjs
       .sendForm(
         "service_hk6g79n",
@@ -51,15 +53,17 @@ const Regi2 = () => {
         (result) => {
           alert("Message sent successfully");
           console.log(result.text);
+          setDisabled(false);
         },
         (error) => {
           alert("Error while sending the message");
           console.log(error.text);
+          setDisabled(false);
         }
       );
   };
 
-  let Ddate = new Date("July 08, 2023 00:00:00").getTime();
+  let Ddate = new Date(0).getTime();
 
   const setTime = () => {
     let getDate = new Date();
@@ -68,6 +72,15 @@ const Regi2 = () => {
     let THour = Math.floor((now % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     let TMin = Math.floor((now % (1000 * 60 * 60)) / (1000 * 60));
     let TSec = Math.floor((now % (1000 * 60)) / 1000);
+
+    // Check if the countdown has ended
+    if (now <= 0) {
+      TDay = 0;
+      THour = 0;
+      TMin = 0;
+      TSec = 0;
+    }
+
     setTday(TDay);
     setThour(THour);
     setTmin(TMin);
@@ -104,7 +117,7 @@ const Regi2 = () => {
                   <input
                     type="text"
                     className="border-solid border-b-2 border-black outline-none w-full py-2 my-2"
-                    onChange={nameHandler}
+                    // onChange={nameHandler}
                     placeholder="Full Name"
                     name="user_name"
                     required
@@ -113,7 +126,7 @@ const Regi2 = () => {
                     type="tel"
                     name="user_phone"
                     className="border-solid border-b-2 border-black outline-none w-full py-2 my-2"
-                    onChange={phoneHandler}
+                    // onChange={phoneHandler}
                     placeholder="Phone Number"
                     required
                   />
@@ -121,7 +134,7 @@ const Regi2 = () => {
                     type="email"
                     name="user_email"
                     className="border-solid border-b-2 border-black outline-none w-full py-2 my-2"
-                    onChange={emailHandler}
+                    // onChange={emailHandler}
                     placeholder="Email Address"
                     required
                   />
@@ -129,8 +142,8 @@ const Regi2 = () => {
                     name="user_course"
                     id="courses"
                     className="border-solid border-b-2 border-black outline-none bg-transparent w-full py-2 my-2"
-                    onChange={choiceHandler}
-                    value={choice}
+                    // onChange={choiceHandler}
+                    // value={choice}
                     required
                   >
                     <option value="" disabled hidden>
@@ -150,6 +163,7 @@ const Regi2 = () => {
 
                   <button
                     type="submit"
+                    disabled={disabled}
                     className="border-none rounded-xl outline-none bg-gradient-to-r from-[#E94484] to-[#E68F5C] w-full py-4 text-white mt-5"
                   >
                     Submit

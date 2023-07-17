@@ -15,6 +15,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import Brochure from "../assets/CourseBrochure.pdf";
+import "./Footer.css";
 
 const currentYear = new Date().getFullYear();
 
@@ -33,6 +34,19 @@ const FooterLink = (props) => {
       </li>
     </>
   );
+};
+
+const showTooltip = (element) => {
+  var tooltip = element.querySelector(".tooltip");
+  if (tooltip.style.opacity === 1) {
+    tooltip.style.opacity = 0;
+    tooltip.style.visibility = "hidden";
+    tooltip.style.pointerEvents = "none";
+  } else {
+    tooltip.style.opacity = 1;
+    tooltip.style.visibility = "visible";
+    tooltip.style.pointerEvents = "auto";
+  }
 };
 
 export default function Footer() {
@@ -61,20 +75,6 @@ export default function Footer() {
                 fontWeight: "400",
                 fontSize: "12px",
                 lineHeight: "15px",
-
-                // Responsive styles // ?????????
-                // "@media (max-width: 375px)": {
-                //   width: "90%",
-                //   left: "50%",
-                //   transform: "translateX(-50%)",
-                //   right: "40%",
-                //   top: "50%",
-                //   fontFamily: "Inter",
-                //   fontStyle: "normal",
-                //   fontSize: "10px",
-                //   lineHeight: "12px",
-                //   color: "red",
-                // },
               }}
             >
               <h6>
@@ -148,84 +148,52 @@ export default function Footer() {
                 </li>
               </ul>
               <br />
-              <div className="flex justify-center gap-4 text-white sm:justify-start">
-                <Typography
-                  as="a"
-                  href="https://www.instagram.com/insdnanded/?igshid=NTc4MTIwNjQ2YQ%3D%3D"
-                  target="_blank"
-                  className="opacity-80 transition-opacity hover:opacity-100"
+              <ul class="wrapper">
+                <li
+                  class="icon facebook"
+                  onClick={(e) => showTooltip(e.currentTarget)}
                 >
-                  <FontAwesomeIcon icon={faInstagram} />{" "}
-                  {/* Replace svg with FontAwesomeIcon */}
-                </Typography>
-
-                <Typography
-                  as="a"
-                  href="https://www.facebook.com/profile.php?id=100092238022279"
-                  target="_blank"
-                  className="opacity-80 transition-opacity hover:opacity-100"
-                >
-                  <FontAwesomeIcon icon={faFacebook} />{" "}
-                  {/* Replace svg with FontAwesomeIcon */}
-                </Typography>
-
-                <Typography
-                  as="a"
-                  href="https://www.yotube.com"
-                  target="_blank"
-                  className="opacity-80 transition-opacity hover:opacity-100"
-                >
-                  <FontAwesomeIcon icon={faYoutube} />{" "}
-                  {/* Replace svg with FontAwesomeIcon */}
-                </Typography>
-
-                <Typography
-                  as="a"
-                  href="https://www.linkedin.com/in/insd-nanded-609935276"
-                  target="_blank"
-                  className="opacity-80 transition-opacity hover:opacity-100"
-                >
-                  <FontAwesomeIcon icon={faLinkedin} />{" "}
-                  {/* Replace svg with FontAwesomeIcon */}
-                </Typography>
-
-                <Typography
-                  as="a"
-                  href="https://www.twitter.com"
-                  target="_blank"
-                  className="opacity-80 transition-opacity hover:opacity-100"
-                >
-                  <FontAwesomeIcon icon={faTwitter} />{" "}
-                  {/* Replace svg with FontAwesomeIcon */}
-                </Typography>
-              </div>
+                  <span class="tooltip">Facebook</span>
+                  <span>
+                    <a href="https://www.facebook.com/profile.php?id=100092238022279">
+                      <FontAwesomeIcon icon={faFacebook} />{" "}
+                    </a>
+                  </span>
+                </li>
+                <li class="icon twitter">
+                  <span class="tooltip">Twitter</span>
+                  <span>
+                    <a href="https://www.twitter.com">
+                      <FontAwesomeIcon icon={faTwitter} />{" "}
+                    </a>
+                  </span>
+                </li>
+                <li class="icon instagram">
+                  <span class="tooltip">Instagram</span>
+                  <span>
+                    <a href="https://www.instagram.com/insdnanded/?igshid=NTc4MTIwNjQ2YQ%3D%3D">
+                      <FontAwesomeIcon icon={faInstagram} />{" "}
+                    </a>
+                  </span>
+                </li>
+                <li class="icon linkedin">
+                  <span class="tooltip">LinkedIn</span>
+                  <span>
+                    <a href="https://www.linkedin.com/in/insd-nanded-609935276">
+                      <FontAwesomeIcon icon={faLinkedin} />{" "}
+                    </a>
+                  </span>
+                </li>
+                <li class="icon youtube">
+                  <span class="tooltip">Youtube</span>
+                  <span>
+                    <a href="https://www.yotube.com">
+                      <FontAwesomeIcon icon={faYoutube} />{" "}
+                    </a>
+                  </span>
+                </li>
+              </ul>
             </div>
-            {/* <input
-              type="email"
-              placeholder="email@email.com"
-              style={{
-                padding: "0px 16px",
-                color: "#000",
-                width: "200px",
-                height: "35px",
-                borderTopLeftRadius: "20px",
-                borderBottomLeftRadius: "20px",
-              }}
-            />
-            <button
-              type="submit"
-              value="Submit"
-              style={{
-                background:
-                  "linear-gradient(90deg, rgba(233,68,132,1) 0%, rgba(230,143,92,1) 100%)",
-                height: "36px",
-                width: "80px",
-                borderTopRightRadius: "20px",
-                borderBottomRightRadius: "20px",
-              }}
-            >
-              Submit
-            </button> */}
           </div>
         </div>
       </div>
