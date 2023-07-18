@@ -110,27 +110,27 @@ function App() {
                 <Route path="/" element={<Home />}></Route>
                 <Route
                   path="/courses/fashiondesign"
-                  element={<> <Form /> <FashionDesign data="sample data 2" /> </>}
+                  element={<> <Form coursename="Fashion Designing" point1="Designer/Assistant Designer" point2="Fashion Illustrator" point3="Costume Designer" point4="Personal Stylist" point5="Production Pattern Maker" point6="Pattern Designer" point7="Fashion Entrepreneur" point8="Fashion Consultant" point9="Technical Designer" point10="Fashion Coordinator" /> <FashionDesign data="sample data 2" /> </>}
                 ></Route>
                 <Route
                   path="/courses/interiordesign"
-                  element={<> <Form /> <InteriorDesign /> </>}
+                  element={<> <Form coursename="Interior Designing" point1=" Commercial interior designer" point2="Residential interior designer" point3="Design consultant" point4="Cad designer" point5="Exhibition designer furniture designer" point6="Furniture Designer" point7="Institutional interior designer" point8="Lighting designer" point9="Freelancer designer"/> <InteriorDesign /> </>}
                 ></Route>
                 <Route
                   path="/courses/textiledesign"
-                  element={<> <Form /> <TextileDesign /> </>}
+                  element={<> <Form coursename="Textile Designing" point1="Patternmaker" point2="Product developer" point3="Fashion buyerFashion consultant" point4="Textile research scientist" point5="Technical designer" point6="Store manager" point7="Quality assurance evaluator" point8="Costume designer" point9="Theatrical costuming operations manager" point10="Apparel sales representative" /> <TextileDesign /> </>}
                 ></Route>
                 <Route
                   path="/courses/jewellerydesign"
-                  element={<> <Form /> <JewelleryDesign /> </>}
+                  element={<> <Form coursename="Jewellery Designing" point1="Jewellery Designer" point2="Jewellery Merchandiser" point3="Jewellery Blogger" point4="Jewellery Journalist" point5="Manufacturer" point6="Lecturer/professor" point7="Casting Manager" point8="Jewellery Social media manager" point9="Marketing Head/assistant" point10="Sales Representative"/> <JewelleryDesign /> </>}
                 ></Route>
                 <Route
                   path="/courses/graphicdesign"
-                  element={<> <Form /> <GraphicDesign /></>}
+                  element={<> <Form coursename="Graphic Designing" point1="Graphic designer" point2="Web designer" point3="Creative director" point4="User experience (UX) designer" point5="Art director" point6="Packaging Designer" point7="Illustrator" point8="Dtp Operator" point9="Layout Designer" point10="Digital Storyboard Designer"/> <GraphicDesign /></>}
                 ></Route>
                 <Route
                   path="/courses/animation_VFX_design"
-                  element={<> <Form /> <AnimationDesign /></>}
+                  element={<> <Form coursename="Animation & VFX" point1="Titling Artist" point2="Maya Animator" point3="Maya Lighting Artist" point4="Matchmoving Artist" point5="Motion Graphics Artist" point6="Maya Modeler" point7="Maya Texturing Artist" point8="Maya Dynamics Artist" point9="Compositor" point10="FxArtist"/> <AnimationDesign /></>}
                 ></Route>
                 <Route
                   path="/courses/photographydesign"
