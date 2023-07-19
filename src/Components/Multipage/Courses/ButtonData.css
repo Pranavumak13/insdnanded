@@ -96,7 +96,7 @@
 }
 
 .data-container {
-  margin: 4px 8px;
+  margin: 4px 24px;
 }
 
 .data-grid {
@@ -106,13 +106,17 @@
 }
 
 .data-grid div {
-  width: 49vw;
+  width: 43vw;
 }
 
 .data-grid div div {
   padding: 4px;
-  height: 72px;
-  border: 1px solid #777;
+  height: 80px;
+  border-bottom: dotted 1px #000;
+}
+
+.data-grid div div:last-of-type {
+  border-bottom: none;
 }
 
 .data-gridhead {

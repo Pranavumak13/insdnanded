@@ -192,17 +192,28 @@ function ButtonData(props) {
         {/* Subject Table */}
         <div className="data-container">
           {currentSubObject ? (
-            <div className="data-grid">
+            <div className="data-grid" style={{ border: "solid 1.5px #000" }}>
               <div>
-                <div className="data-gridhead">
+                <div
+                  className="data-gridhead"
+                  style={{
+                    borderRight: "dotted 1px #000",
+                    borderBottom: "dotted 1px #000",
+                  }}
+                >
                   {currentSubObject.years[selectedYear].sem1.name}
                 </div>
                 {currentSubObject.years[selectedYear].sem1.subjects.map((i) => {
-                  return <div>{i}</div>;
+                  return (
+                    <div style={{ borderRight: "dotted 1px #000" }}>{i}</div>
+                  );
                 })}
               </div>
               <div>
-                <div className="data-gridhead">
+                <div
+                  className="data-gridhead"
+                  style={{ borderBottom: "dotted 1px #000" }}
+                >
                   {currentSubObject.years[selectedYear].sem2.name}
                 </div>
                 {currentSubObject.years[selectedYear].sem2.subjects.map((i) => {
