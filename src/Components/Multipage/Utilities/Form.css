@@ -1,20 +1,19 @@
-.containerform{
+.containerform {
   display: flex;
   flex-direction: row;
- margin-left: 200px;
- margin-right: 200px;
+  margin-left: 200px;
+  margin-right: 200px;
   justify-content: center;
   align-items: center;
   padding: 100px 0px;
-
 }
 
-.leftcontainer{
+.leftcontainer {
   justify-content: center;
   align-items: center;
   margin-left: 80px;
 }
-.listmain{
+.listmain {
   flex: 0.5;
   display: flex;
   /* margin-left: 30px; */
@@ -22,25 +21,24 @@
   gap: 40px;
   font-size: larger;
 }
-.rightmost{
+.rightmost {
   display: flex;
   flex: 0.4;
   align-items: center;
-justify-content: center;
+  justify-content: center;
 }
-.rightcontainer{
+.rightcontainer {
   /* display: flex; */
-     background-image: linear-gradient(
-  90deg,
-  rgba(233, 68, 132, 1) 0%,
-  rgba(230, 143, 92, 1) 100%
-);
+  background-image: linear-gradient(
+    90deg,
+    rgba(233, 68, 132, 1) 0%,
+    rgba(230, 143, 92, 1) 100%
+  );
   width: 700px;
   height: 750px;
   border-radius: 20px;
 }
-.innerRight{
-  
+.innerRight {
   background-color: white;
   width: 500px;
   height: 600px;
@@ -50,58 +48,64 @@ justify-content: center;
   margin-bottom: 60px;
   border-radius: 20px;
 }
-.rightcontainer h1{
-  
+.rightcontainer h1 {
   color: white;
   font-family: sans-serif;
   /* font-weight: bold; */
   margin-left: 80px;
   margin-top: 30px;
   font-size: xx-large;
-  
 }
 
-.gradient-image{
+.gradient-image {
   width: 30px;
   height: 30px;
   border-radius: 100%;
 }
-.list1 .l1, .l2, .l3, .l4, .l5{
+.list1 .l1,
+.l2,
+.l3,
+.l4,
+.l5 {
   margin-top: 20px;
   display: flex;
   gap: 10px;
 }
-.list2 .l6, .l7, .l8, .l9, .l10{
+.list2 .l6,
+.l7,
+.l8,
+.l9,
+.l10 {
   margin-top: 20px;
   display: flex;
   gap: 10px;
 }
-#full-name3, #email3, #phone-number3, #courses3, #message3 {
+#full-name3,
+#email3,
+#phone-number3,
+#courses3,
+#message3 {
   margin-left: 40px;
 }
-#label3{
-  margin-left:40px;
+#label3 {
+  margin-left: 40px;
 }
 
-#button3{
+#button3 {
   margin-left: 40px;
   border-radius: 20px;
-
 }
 
-@media only screen and (max-width: 768px)  {
-  .container{
-      flex-direction: column;
-      gap: 100px;
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 100px;
   }
 
-  .listmain{
-     /* margin-top: 100px; */
-     flex-direction: column;
-     gap: 0px;
+  .listmain {
+    /* margin-top: 100px; */
+    flex-direction: column;
+    gap: 0px;
     /* display: block;  */
-  }
-
-  .rightcontainer{
   }
 }

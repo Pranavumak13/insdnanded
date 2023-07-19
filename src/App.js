@@ -17,7 +17,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 // COURSES IMPORT
 import ButtonData from "./Components/Multipage/Courses/ButtonData";
-import { fashion, interior, graphic, textile, animaton, jwellery } from "./Components/Multipage/Courses/CoursesData";
+import { fashion, interior, graphic, textile, animaton, jwellery, photography } from "./Components/Multipage/Courses/CoursesData";
 import { Routes, Route, Link } from "react-router-dom";
 
 // HOMEPAGE
@@ -96,6 +96,15 @@ const JewelleryDesign = (props) => {
   );
 };
 
+const PhotographyDesign = (props) => {
+  return (
+    <>
+      {/* FORM & LIST */}
+      <ButtonData dataobj={photography} />
+    </>
+  );
+};
+
 function App() {
   return (
     <>
@@ -114,7 +123,7 @@ function App() {
                 ></Route>
                 <Route
                   path="/courses/interiordesign"
-                  element={<> <Form coursename="Interior Designing" point1=" Commercial interior designer" point2="Residential interior designer" point3="Design consultant" point4="Cad designer" point5="Exhibition designer furniture designer" point6="Furniture Designer" point7="Institutional interior designer" point8="Lighting designer" point9="Freelancer designer"/> <InteriorDesign /> </>}
+                  element={<> <Form coursename="Interior Designing" point1=" Commercial interior designer" point2="Residential interior designer" point3="Design consultant" point4="Cad designer" point5="Exhibition designer furniture designer" point6="Furniture Designer" point7="Institutional interior designer" point8="Lighting designer" point9="Freelancer designer" /> <InteriorDesign /> </>}
                 ></Route>
                 <Route
                   path="/courses/textiledesign"
@@ -122,19 +131,19 @@ function App() {
                 ></Route>
                 <Route
                   path="/courses/jewellerydesign"
-                  element={<> <Form coursename="Jewellery Designing" point1="Jewellery Designer" point2="Jewellery Merchandiser" point3="Jewellery Blogger" point4="Jewellery Journalist" point5="Manufacturer" point6="Lecturer/professor" point7="Casting Manager" point8="Jewellery Social media manager" point9="Marketing Head/assistant" point10="Sales Representative"/> <JewelleryDesign /> </>}
+                  element={<> <Form coursename="Jewellery Designing" point1="Jewellery Designer" point2="Jewellery Merchandiser" point3="Jewellery Blogger" point4="Jewellery Journalist" point5="Manufacturer" point6="Lecturer/professor" point7="Casting Manager" point8="Jewellery Social media manager" point9="Marketing Head/assistant" point10="Sales Representative" /> <JewelleryDesign /> </>}
                 ></Route>
                 <Route
                   path="/courses/graphicdesign"
-                  element={<> <Form coursename="Graphic Designing" point1="Graphic designer" point2="Web designer" point3="Creative director" point4="User experience (UX) designer" point5="Art director" point6="Packaging Designer" point7="Illustrator" point8="Dtp Operator" point9="Layout Designer" point10="Digital Storyboard Designer"/> <GraphicDesign /></>}
+                  element={<> <Form coursename="Graphic Designing" point1="Graphic designer" point2="Web designer" point3="Creative director" point4="User experience (UX) designer" point5="Art director" point6="Packaging Designer" point7="Illustrator" point8="Dtp Operator" point9="Layout Designer" point10="Digital Storyboard Designer" /> <GraphicDesign /></>}
                 ></Route>
                 <Route
                   path="/courses/animation_VFX_design"
-                  element={<> <Form coursename="Animation & VFX" point1="Titling Artist" point2="Maya Animator" point3="Maya Lighting Artist" point4="Matchmoving Artist" point5="Motion Graphics Artist" point6="Maya Modeler" point7="Maya Texturing Artist" point8="Maya Dynamics Artist" point9="Compositor" point10="FxArtist"/> <AnimationDesign /></>}
+                  element={<> <Form coursename="Animation & VFX" point1="Titling Artist" point2="Maya Animator" point3="Maya Lighting Artist" point4="Matchmoving Artist" point5="Motion Graphics Artist" point6="Maya Modeler" point7="Maya Texturing Artist" point8="Maya Dynamics Artist" point9="Compositor" point10="FxArtist" /> <AnimationDesign /></>}
                 ></Route>
                 <Route
                   path="/courses/photographydesign"
-                  element={<><Form /> <h1> Photography </h1></>}
+                  element={<><Form /> <PhotographyDesign /> </>}
                 ></Route>
                 <Route
                   path="/courses/beautyhairdesign"

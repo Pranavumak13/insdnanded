@@ -2950,3 +2950,69 @@ export const jwellery = {
     },
   },
 };
+
+// ---------------------------------- Photography -----------------------------------
+
+export const photography = {
+  diploma: {
+    diploma_basic: {
+      name: "Diploma in Photography",
+      years: [
+        {
+          name: "Year One",
+          sem1: {
+            name: "Semester One",
+            subjects: [
+              "Camera & Types of Cameras",
+              "Different Light Sources And Comparative",
+              "Over and Under Exposures",
+              "Processing of Black & White Films",
+            ],
+            credits: 20,
+          },
+          sem2: {
+            name: "Semester Two",
+            subjects: [
+              "Understanding the Human Body",
+              "Introduction to studio lights and effects",
+              "Different Lightnings in the Studio and Effects",
+              "Studio Photography",
+            ],
+            credits: 20,
+          },
+        },
+      ],
+    },
+    diploma_adv: {},
+    diploma_ug: {},
+    diploma_pg: {},
+  },
+  bachelors: {
+    bdesign: {},
+    bsc: {},
+  },
+  masters: {
+    mdesign: {},
+    msc: {},
+  },
+  certificate: {
+    certificate: {
+      name: "Certificate in Photography",
+      years: [
+        {
+          name: "Year One",
+          sem1: {
+            name: "Semester One",
+            subjects: [
+              "Camera & Types of Cameras",
+              "Different Light Sources And Comparative",
+              "Over and Under Exposures",
+              "Processing of Black & White Films",
+            ],
+            credits: 20,
+          },
+        },
+      ],
+    },
+  },
+};

@@ -156,7 +156,7 @@ const Regi2 = () => {
                       Jewellery Designing
                     </option>
                     <option value="Graphic Design">Graphic Designing</option>
-                    <option value="Animation & VFC">Animation & VFX</option>
+                    <option value="Animation & VFX">Animation & VFX</option>
                     <option value="Photography">Photography</option>
                     <option value="Beauty & Hair">Beauty & Hair</option>
                   </select>
@@ -164,9 +164,9 @@ const Regi2 = () => {
                   <button
                     type="submit"
                     disabled={disabled}
-                    className="border-none rounded-xl outline-none bg-gradient-to-r from-[#E94484] to-[#E68F5C] w-full py-4 text-white mt-5"
+                    className="disabled:cursor-not-allowed border-none rounded-xl outline-none bg-gradient-to-r from-[#E94484] to-[#E68F5C] w-full py-4 text-white mt-5"
                   >
-                    Submit
+                    {disabled ? "Sending..." : "Send"}
                   </button>
                 </form>
               </div>

@@ -28,3 +28,7 @@
     @apply font-semibold;
   }
 } */
+
+* {
+  font-family: "PT Serif", serif;
+}
