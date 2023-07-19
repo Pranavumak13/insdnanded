@@ -1,34 +1,21 @@
 /* Buttons styling */
 .coursebtn-container {
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 70vh;
+  height: fit-content;
+  gap: 24px;
   width: 100%;
-  background-color: red;
-}
-
-.coursebtn {
-  background-color: yellow;
-  flex: 1;
-  width: 100%;
-  overflow: hidden;
-  transition: all 1s;
-}
-
-.coursebtn-active {
-  flex: 0.1;
 }
 
 .coursesubbtn {
-  overflow: hidden;
   display: grid;
   grid-template-rows: 0fr;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .coursesubbtn-active {
-  flex: 0.6;
   grid-template-rows: 1fr;
 }
 
@@ -36,46 +23,55 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
   overflow: hidden;
 }
 
 .coursesubbtn-inner button {
-  background-color: greenyellow;
+  background: var(--lineargrad);
+  color: #fff;
+  border-radius: 16px;
+  margin: 8px 0px;
+  width: 250px;
+  padding: 8px;
 }
 
 @media only screen and (min-width: 786px) {
   .coursebtn-container {
+    display: flex;
     flex-direction: row;
-    height: 50vh;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 0;
   }
-  .coursebtn {
-    height: 100%;
-    flex: auto;
-    width: 40wv;
-  }
-  .coursebtn-active {
-    width: 10vw;
-    flex: auto;
-  }
-  .coursebtn p {
-    transition: all 1s;
-  }
-  .coursebtn-active p {
-    font-size: 50px;
-    transform: translateY(2em) rotate(-90deg);
-  }
-  .coursesubbtn {
-    grid-template-rows: auto;
-    grid-template-columns: 0fr;
-    height: 100%;
-    flex: auto;
-  }
+
+  .coursesubbtn,
   .coursesubbtn-active {
-    grid-template-rows: auto;
-    grid-template-columns: 1fr;
+    position: absolute;
+    margin-top: 16px;
+    box-shadow: 0px 0px 8px #0007;
+    border-radius: 16px;
+    background: #fff;
+    width: 275px;
   }
-  .coursesubbtn button {
-    width: 60vw;
+
+  .coursesubbtn-inner button {
+    width: 200px;
+  }
+
+  .coursesubbtn-active::after {
+    position: absolute;
+    top: -20px;
+    left: 134px;
+    content: "▲";
+    width: 0;
+    height: 0;
+    /* border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff; */
+    text-shadow: 0px -4px 8px #0007;
+    color: #fff;
   }
 }
 
@@ -94,9 +90,9 @@
 }
 
 .data-yearbtn {
-  margin: 4px 8px;
+  margin: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .data-container {
@@ -104,7 +100,7 @@
 }
 
 .data-grid {
-  background-color: #ddd;
+  background-color: #fff;
   display: grid;
   grid-template-columns: auto auto;
 }
@@ -116,7 +112,7 @@
 .data-grid div div {
   padding: 4px;
   height: 72px;
-  border: 1px solid #fff;
+  border: 1px solid #777;
 }
 
 .data-gridhead {
@@ -135,12 +131,7 @@
     width: fit-content;
   }
   .data-yearbtn button {
-    padding: 8px 16px;
     margin: 0px 8px;
-    border-radius: 16px;
-  }
-  .data-yearbtn button:hover {
-    box-shadow: 0px 0px 4px #000a;
   }
   .data-grid {
     width: 60vw;
