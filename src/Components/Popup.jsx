@@ -113,7 +113,7 @@ function Popup() {
             // value={choice}
             required
           >
-            <option value="" disabled hidden>
+            <option value="" disabled hidden selected>
               Select a course
             </option>
             <option value="Fashion Design">Fashion Designing</option>
