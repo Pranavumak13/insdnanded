@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import "./ButtonData.css";
+import { BorderButton, RoundedButton } from "../../Utilities/FancyButtons";
 
 function ButtonData(props) {
   const currentCourse = props.dataobj;
-  const [currentSubObject, setCurrentSubObject] = useState(false);
+  const [currentSubObject, setCurrentSubObject] = useState(
+    currentCourse.diploma.diploma_basic
+  );
+
   //Buttons
   const Buttons = () => {
     const [currentObject, setCurrentObject] = useState({});
@@ -13,8 +17,7 @@ function ButtonData(props) {
       <>
         <div className="coursebtn-container">
           {/* Diploma Button */}
-          <button
-            className={isSubOpen ? "coursebtn coursebtn-active" : "coursebtn"}
+          <div
             onClick={() => {
               if (currentObject === currentCourse.diploma) {
                 setIsSubOpen(false);
@@ -25,32 +28,35 @@ function ButtonData(props) {
               }
             }}
           >
-            <p>Diploma</p>
-          </button>
-          <div
-            className={
-              currentObject === currentCourse.diploma && isSubOpen
-                ? "coursesubbtn coursesubbtn-active"
-                : "coursesubbtn"
-            }
-          >
-            <div className="coursesubbtn-inner">
-              {Object.keys(currentCourse.diploma).map((i) => {
-                return (
-                  <button
-                    onClick={() => {
-                      setCurrentSubObject(currentCourse.diploma[i]);
-                    }}
-                  >
-                    {currentCourse.diploma[i].name}
-                  </button>
-                );
-              })}
+            <div
+              className={isSubOpen ? "coursebtn coursebtn-active" : "coursebtn"}
+            >
+              <BorderButton name="Diploma" />
+            </div>
+            <div
+              className={
+                currentObject === currentCourse.diploma && isSubOpen
+                  ? "coursesubbtn coursesubbtn-active"
+                  : "coursesubbtn"
+              }
+            >
+              <div className="coursesubbtn-inner">
+                {Object.keys(currentCourse.diploma).map((i) => {
+                  return (
+                    <div
+                      onClick={() => {
+                        setCurrentSubObject(currentCourse.diploma[i]);
+                      }}
+                    >
+                      <button>{currentCourse.diploma[i].name}</button>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
           {/* Bachelor's Button */}
-          <button
-            className={isSubOpen ? "coursebtn coursebtn-active" : "coursebtn"}
+          <div
             onClick={() => {
               if (currentObject === currentCourse.bachelors) {
                 setIsSubOpen(false);
@@ -61,32 +67,35 @@ function ButtonData(props) {
               }
             }}
           >
-            Bachelor's
-          </button>
-          <div
-            className={
-              currentObject === currentCourse.bachelors && isSubOpen
-                ? "coursesubbtn coursesubbtn-active"
-                : "coursesubbtn"
-            }
-          >
-            <div className="coursesubbtn-inner">
-              {Object.keys(currentCourse.bachelors).map((i) => {
-                return (
-                  <button
-                    onClick={() => {
-                      setCurrentSubObject(currentCourse.bachelors[i]);
-                    }}
-                  >
-                    {currentCourse.bachelors[i].name}
-                  </button>
-                );
-              })}
+            <div
+              className={isSubOpen ? "coursebtn coursebtn-active" : "coursebtn"}
+            >
+              <BorderButton name="Bachelor's" />
+            </div>
+            <div
+              className={
+                currentObject === currentCourse.bachelors && isSubOpen
+                  ? "coursesubbtn coursesubbtn-active"
+                  : "coursesubbtn"
+              }
+            >
+              <div className="coursesubbtn-inner">
+                {Object.keys(currentCourse.bachelors).map((i) => {
+                  return (
+                    <button
+                      onClick={() => {
+                        setCurrentSubObject(currentCourse.bachelors[i]);
+                      }}
+                    >
+                      {currentCourse.bachelors[i].name}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
           {/* Master's Button */}
-          <button
-            className={isSubOpen ? "coursebtn coursebtn-active" : "coursebtn"}
+          <div
             onClick={() => {
               if (currentObject === currentCourse.masters) {
                 setIsSubOpen(false);
@@ -97,40 +106,51 @@ function ButtonData(props) {
               }
             }}
           >
-            Master's
-          </button>
-          <div
-            className={
-              currentObject === currentCourse.masters && isSubOpen
-                ? "coursesubbtn coursesubbtn-active"
-                : "coursesubbtn"
-            }
-          >
-            <div className="coursesubbtn-inner">
-              {Object.keys(currentCourse.masters).map((i) => {
-                return (
-                  <button
-                    onClick={() => {
-                      setCurrentSubObject(currentCourse.masters[i]);
-                    }}
-                  >
-                    {currentCourse.masters[i].name}
-                  </button>
-                );
-              })}
+            <div
+              className={isSubOpen ? "coursebtn coursebtn-active" : "coursebtn"}
+            >
+              <BorderButton name="Master's" />
+            </div>
+            <div
+              className={
+                currentObject === currentCourse.masters && isSubOpen
+                  ? "coursesubbtn coursesubbtn-active"
+                  : "coursesubbtn"
+              }
+            >
+              <div className="coursesubbtn-inner">
+                {Object.keys(currentCourse.masters).map((i) => {
+                  return (
+                    <button
+                      onClick={() => {
+                        setCurrentSubObject(currentCourse.masters[i]);
+                      }}
+                    >
+                      {currentCourse.masters[i].name}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
           {/* Certification Button */}
-          <button
-            className={isSubOpen ? "coursebtn coursebtn-active" : "coursebtn"}
+          {/* <div>
+            <button
+              className={isSubOpen ? "coursebtn coursebtn-active" : "coursebtn"}
+              
+            >
+              Certification
+            </button>
+          </div> */}
+          <div
             onClick={() => {
               window.alert(
                 "Certification Courses will be added to the website soon!"
               );
             }}
           >
-            Certification
-          </button>
+            <BorderButton name="Certification" />
+          </div>
         </div>
       </>
     );
@@ -156,13 +176,13 @@ function ButtonData(props) {
           {currentSubObject ? (
             currentSubObject.years.map((i, index) => {
               return (
-                <button
+                <div
                   onClick={() => {
                     setSelectedYear(index);
                   }}
                 >
-                  {i.name}
-                </button>
+                  <RoundedButton name={i.name} />
+                </div>
               );
             })
           ) : (

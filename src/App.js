@@ -12,12 +12,20 @@ import Awards from "./Components/Awards";
 import Recruiters from "./Components/Recruiters";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
-import Form from "./Components/Multipage/Utilities/Form"
+import Form from "./Components/Multipage/Utilities/Form";
 import { Analytics } from "@vercel/analytics/react";
 
 // COURSES IMPORT
 import ButtonData from "./Components/Multipage/Courses/ButtonData";
-import { fashion, interior, graphic, textile, animaton, jwellery, photography } from "./Components/Multipage/Courses/CoursesData";
+import {
+  fashion,
+  interior,
+  graphic,
+  textile,
+  animaton,
+  jwellery,
+  photography,
+} from "./Components/Multipage/Courses/CoursesData";
 import { Routes, Route, Link } from "react-router-dom";
 
 // HOMEPAGE
@@ -44,7 +52,19 @@ const Home = () => {
 const FashionDesign = (props) => {
   return (
     <>
-      {/* FORM & LIST */}
+      <Form
+        coursename="Fashion Designing"
+        point1="Designer/Assistant Designer"
+        point2="Fashion Illustrator"
+        point3="Costume Designer"
+        point4="Personal Stylist"
+        point5="Production Pattern Maker"
+        point6="Pattern Designer"
+        point7="Fashion Entrepreneur"
+        point8="Fashion Consultant"
+        point9="Technical Designer"
+        point10="Fashion Coordinator"
+      />
       <ButtonData dataobj={fashion} />
     </>
   );
@@ -53,7 +73,19 @@ const FashionDesign = (props) => {
 const GraphicDesign = (props) => {
   return (
     <>
-      {/* FORM & LIST */}
+      <Form
+        coursename="Graphic Designing"
+        point1="Graphic designer"
+        point2="Web designer"
+        point3="Creative director"
+        point4="User experience (UX) designer"
+        point5="Art director"
+        point6="Packaging Designer"
+        point7="Illustrator"
+        point8="Dtp Operator"
+        point9="Layout Designer"
+        point10="Digital Storyboard Designer"
+      />
       <ButtonData dataobj={graphic} />
     </>
   );
@@ -62,7 +94,19 @@ const GraphicDesign = (props) => {
 const TextileDesign = (props) => {
   return (
     <>
-      {/* FORM & LIST */}
+      <Form
+        coursename="Textile Designing"
+        point1="Patternmaker"
+        point2="Product developer"
+        point3="Fashion buyerFashion consultant"
+        point4="Textile research scientist"
+        point5="Technical designer"
+        point6="Store manager"
+        point7="Quality assurance evaluator"
+        point8="Costume designer"
+        point9="Theatrical costuming operations manager"
+        point10="Apparel sales representative"
+      />
       <ButtonData dataobj={textile} />
     </>
   );
@@ -71,7 +115,18 @@ const TextileDesign = (props) => {
 const InteriorDesign = (props) => {
   return (
     <>
-      {/* FORM & LIST */}
+      <Form
+        coursename="Interior Designing"
+        point1=" Commercial interior designer"
+        point2="Residential interior designer"
+        point3="Design consultant"
+        point4="Cad designer"
+        point5="Exhibition designer furniture designer"
+        point6="Furniture Designer"
+        point7="Institutional interior designer"
+        point8="Lighting designer"
+        point9="Freelancer designer"
+      />
       <ButtonData dataobj={interior} />
     </>
   );
@@ -80,7 +135,19 @@ const InteriorDesign = (props) => {
 const AnimationDesign = (props) => {
   return (
     <>
-      {/* FORM & LIST */}
+      <Form
+        coursename="Animation & VFX"
+        point1="Titling Artist"
+        point2="Maya Animator"
+        point3="Maya Lighting Artist"
+        point4="Matchmoving Artist"
+        point5="Motion Graphics Artist"
+        point6="Maya Modeler"
+        point7="Maya Texturing Artist"
+        point8="Maya Dynamics Artist"
+        point9="Compositor"
+        point10="FxArtist"
+      />
       <ButtonData dataobj={animaton} />
     </>
   );
@@ -89,7 +156,19 @@ const AnimationDesign = (props) => {
 const JewelleryDesign = (props) => {
   return (
     <>
-      {/* FORM & LIST */}
+      <Form
+        coursename="Jewellery Designing"
+        point1="Jewellery Designer"
+        point2="Jewellery Merchandiser"
+        point3="Jewellery Blogger"
+        point4="Jewellery Journalist"
+        point5="Manufacturer"
+        point6="Lecturer/professor"
+        point7="Casting Manager"
+        point8="Jewellery Social media manager"
+        point9="Marketing Head/assistant"
+        point10="Sales Representative"
+      />
       <ButtonData dataobj={jwellery} />
     </>
   );
@@ -98,7 +177,7 @@ const JewelleryDesign = (props) => {
 const PhotographyDesign = (props) => {
   return (
     <>
-      {/* FORM & LIST */}
+      <Form />
       <ButtonData dataobj={photography} />
     </>
   );
@@ -118,35 +197,74 @@ function App() {
                 <Route path="/" element={<Home />}></Route>
                 <Route
                   path="/courses/fashiondesign"
-                  element={<> <Form coursename="Fashion Designing" point1="Designer/Assistant Designer" point2="Fashion Illustrator" point3="Costume Designer" point4="Personal Stylist" point5="Production Pattern Maker" point6="Pattern Designer" point7="Fashion Entrepreneur" point8="Fashion Consultant" point9="Technical Designer" point10="Fashion Coordinator" /> <FashionDesign data="sample data 2" /> </>}
+                  element={
+                    <>
+                      {" "}
+                      <FashionDesign />{" "}
+                    </>
+                  }
                 ></Route>
                 <Route
                   path="/courses/interiordesign"
-                  element={<> <Form coursename="Interior Designing" point1=" Commercial interior designer" point2="Residential interior designer" point3="Design consultant" point4="Cad designer" point5="Exhibition designer furniture designer" point6="Furniture Designer" point7="Institutional interior designer" point8="Lighting designer" point9="Freelancer designer" /> <InteriorDesign /> </>}
+                  element={
+                    <>
+                      {" "}
+                      <InteriorDesign />{" "}
+                    </>
+                  }
                 ></Route>
                 <Route
                   path="/courses/textiledesign"
-                  element={<> <Form coursename="Textile Designing" point1="Patternmaker" point2="Product developer" point3="Fashion buyerFashion consultant" point4="Textile research scientist" point5="Technical designer" point6="Store manager" point7="Quality assurance evaluator" point8="Costume designer" point9="Theatrical costuming operations manager" point10="Apparel sales representative" /> <TextileDesign /> </>}
+                  element={
+                    <>
+                      {" "}
+                      <TextileDesign />{" "}
+                    </>
+                  }
                 ></Route>
                 <Route
                   path="/courses/jewellerydesign"
-                  element={<> <Form coursename="Jewellery Designing" point1="Jewellery Designer" point2="Jewellery Merchandiser" point3="Jewellery Blogger" point4="Jewellery Journalist" point5="Manufacturer" point6="Lecturer/professor" point7="Casting Manager" point8="Jewellery Social media manager" point9="Marketing Head/assistant" point10="Sales Representative" /> <JewelleryDesign /> </>}
+                  element={
+                    <>
+                      {" "}
+                      <JewelleryDesign />{" "}
+                    </>
+                  }
                 ></Route>
                 <Route
                   path="/courses/graphicdesign"
-                  element={<> <Form coursename="Graphic Designing" point1="Graphic designer" point2="Web designer" point3="Creative director" point4="User experience (UX) designer" point5="Art director" point6="Packaging Designer" point7="Illustrator" point8="Dtp Operator" point9="Layout Designer" point10="Digital Storyboard Designer" /> <GraphicDesign /></>}
+                  element={
+                    <>
+                      {" "}
+                      <GraphicDesign />
+                    </>
+                  }
                 ></Route>
                 <Route
                   path="/courses/animation_VFX_design"
-                  element={<> <Form coursename="Animation & VFX" point1="Titling Artist" point2="Maya Animator" point3="Maya Lighting Artist" point4="Matchmoving Artist" point5="Motion Graphics Artist" point6="Maya Modeler" point7="Maya Texturing Artist" point8="Maya Dynamics Artist" point9="Compositor" point10="FxArtist" /> <AnimationDesign /></>}
+                  element={
+                    <>
+                      {" "}
+                      <AnimationDesign />
+                    </>
+                  }
                 ></Route>
                 <Route
                   path="/courses/photographydesign"
-                  element={<><Form /> <PhotographyDesign /> </>}
+                  element={
+                    <>
+                      <PhotographyDesign />{" "}
+                    </>
+                  }
                 ></Route>
                 <Route
                   path="/courses/beautyhairdesign"
-                  element={<> <Form /> <h1> Beauty and Hair </h1></>}
+                  element={
+                    <>
+                      {" "}
+                      <Form /> <h1> Beauty and Hair </h1>
+                    </>
+                  }
                 ></Route>
                 <Route
                   path="/:id"

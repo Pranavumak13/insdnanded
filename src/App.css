@@ -2,3 +2,11 @@ body {
   margin-top: 100px;
   scroll-behavior: smooth;
 }
+
+:root {
+  --lineargrad: linear-gradient(
+    90deg,
+    rgba(233, 68, 132, 1) 0%,
+    rgba(230, 143, 92, 1) 100%
+  );
+}
