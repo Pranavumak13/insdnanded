@@ -35,7 +35,6 @@ const Home = () => {
       <span id="awards"></span>
       <Awards />
       <Recruiters />
-      <span id="contact"></span>
       <Contact />
     </>
   );
