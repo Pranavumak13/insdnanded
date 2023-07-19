@@ -65,7 +65,7 @@ function Form(props) {
   return (
     <div className="containerform">
       <div className="leftcontainer">
-        <div>
+        <div class="leftContainer-content">
           <h1>Career Paths after {props.coursename} Course in Nanded</h1>
         </div>
         <div className="listmain">
@@ -237,6 +237,7 @@ function Form(props) {
                   type="submit"
                   disabled={disabled}
                   id="contact-submit"
+                  className="disabled:cursor-not-allowed"
                 >
                   {disabled ? "Sending..." : "Send"}
                 </button>
