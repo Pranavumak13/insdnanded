@@ -120,21 +120,23 @@ export default function Footer() {
                 >
                   <FontAwesomeIcon
                     icon={faLocationDot}
-                    style={{ fontSize: "18px" }}
+                    style={{ fontSize: "18px", marginTop: "0px" }}
                   />
-                  1st Floor, Bhagwati plaza,
-                  <br />
-                  Beside Union Bank, Ashok Nagar,
-                  <br />
-                  Bhagya Nagar Road,
-                  <br />
-                  Nanded.
+                  <p>
+                    1st Floor, Bhagwati plaza,
+                    <br />
+                    Beside Union Bank, Ashok Nagar,
+                    <br />
+                    Bhagya Nagar Road,
+                    <br />
+                    Nanded.
+                  </p>
                 </li>
                 <br />
                 <li className="flex text-left justify-center md:text-center md:justify-start">
                   <FontAwesomeIcon
                     icon={faPhone}
-                    style={{ marginRight: "10px" }}
+                    style={{ marginRight: "10px", marginTop: "4px" }}
                   />
                   +91-8605431313, 9665070493
                 </li>
@@ -142,7 +144,7 @@ export default function Footer() {
                 <li className="flex text-left justify-center md:text-center md:justify-start">
                   <FontAwesomeIcon
                     icon={faEnvelope}
-                    style={{ marginRight: "10px" }}
+                    style={{ marginRight: "10px", marginTop: "5px" }}
                   />
                   info@insdnanded.com
                 </li>
@@ -212,7 +214,7 @@ export default function Footer() {
           className="mb-4 text-center font-normal md:mb-0"
         >
           &copy; {currentYear} INSDnanded |
-          <a href="#home"> Web Development By Team APJ</a>
+          <a href="/"> Web Development By Team APJ</a>
         </Typography>
       </div>
     </footer>

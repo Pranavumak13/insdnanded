@@ -15,6 +15,9 @@ import Footer from "./Components/Footer";
 import Form from "./Components/Multipage/Utilities/Form";
 import { Analytics } from "@vercel/analytics/react";
 
+//Contact Us
+import ContactUs from "./Components/Multipage/ContactUs/ContactUs";
+
 // COURSES IMPORT
 import ButtonData from "./Components/Multipage/Courses/ButtonData";
 import {
@@ -49,6 +52,7 @@ const Home = () => {
     </>
   );
 };
+
 
 // COURSES
 const FashionDesign = (props) => {
@@ -197,6 +201,7 @@ function App() {
               <span id="home"></span>
               <Routes>
                 <Route path="/" element={<Home />}></Route>
+                <Route path="/contact" element={<ContactUs />}></Route>
                 <Route
                   path="/courses/fashiondesign"
                   element={

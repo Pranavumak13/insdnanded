@@ -1,36 +1,36 @@
 /* Added the CSS COde for Positioning of the dropdown elements */
-.dropdown-menu {
+.courses-dropdown-menu {
   position: absolute;
   top: 100%;
   left: 70%;
   transform: translateX(-50%);
   min-width: 200px;
   padding: 2px 2px 0px 2px;
-  z-index: 1;
+  z-index: 99;
   box-shadow: 0 0 10px #0007;
   border-top: 2px solid #777;
   background-color: #fff;
 }
 
-.dropdown-menu li {
+.courses-dropdown-menu li {
   list-style: none;
 }
 
-.dropdown-menu li a {
+.courses-dropdown-menu li a {
   display: block;
   padding: 8px 16px;
   border-bottom: 1px dashed #777;
 }
 
-.dropdown-menu li:first-child a {
+.courses-dropdown-menu li:first-child a {
   padding-top: 10px;
 }
 
-.dropdown-menu li:last-child a {
+.courses-dropdown-menu li:last-child a {
   border-bottom: none;
 }
 
-.dropdown-menu li a:hover {
+.courses-dropdown-menu li a:hover {
   color: transparent;
   background-clip: text;
   background-image: linear-gradient(to right, #ff85ae, #ffa940, #ff4747);
@@ -38,7 +38,7 @@
 }
 
 @media screen and (max-width: 720px) {
-  .dropdown-menu {
+  .courses-dropdown-menu {
     top: 100%;
     left: 0;
     transform: translateX(0);
@@ -48,7 +48,7 @@
 }
 
 /* @media screen and (max-width: 720px) {
-  .dropdown-menu {
+  .courses-dropdown-menu {
     top: 100%;
     left: 37%;
     transform: translateX(-100%);

@@ -25,8 +25,9 @@ const Navbar = () => {
         { name: "BEAUTY & HAIR DESIGNING", link: "/courses/beautyhairdesign" },
       ],
     },
-    { name: "CONTACT", link: "#contact" },
-    {name: "PLACEMENT", link: "/Components/Placement", subLink: ""},
+    {name: "PLACEMENT", link: "/Components/Placement"},
+    { name: "CONTACT", link: "/contact" },
+
   ];
 
   let [open, setOpen] = useState(false);
@@ -97,7 +98,7 @@ const Navbar = () => {
               </Navlink>
               {Link.subLinks &&
                 dropdownOpen && ( // Added the sublinks code.
-                  <ul className="dropdown-menu">
+                  <ul className="courses-dropdown-menu">
                     {Link.subLinks.map((subLink) => (
                       <li key={subLink.name}>
                         <a href={subLink.link}>{subLink.name}</a>

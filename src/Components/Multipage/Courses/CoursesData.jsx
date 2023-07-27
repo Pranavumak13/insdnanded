@@ -1875,7 +1875,7 @@ export const textile = {
   },
   bachelors: {
     bdesign: {
-      name: "B.Design in Graphics Design",
+      name: "B.Design in Textile Design",
       years: [
         {
           name: "Year One",
@@ -1951,7 +1951,7 @@ export const textile = {
       ],
     },
     bsc: {
-      name: "B.Sc. in Graphics Design",
+      name: "B.Sc. in Textile Design",
       years: [
         {
           name: "Year One",
@@ -2016,7 +2016,7 @@ export const textile = {
   },
   masters: {
     mdesign: {
-      name: "M.Design in Graphics Design",
+      name: "M.Design in Textile Design",
       years: [
         {
           name: "Year One",
@@ -2047,7 +2047,7 @@ export const textile = {
       ],
     },
     msc: {
-      name: "M.Sc. in Graphics Design",
+      name: "M.Sc. in Textile Design",
       years: [
         {
           name: "Year One",
@@ -2080,7 +2080,7 @@ export const textile = {
   },
   certificate: {
     certificate: {
-      name: "Certificate in Graphics Design",
+      name: "Certificate in Textile Design",
       years: [
         {
           name: "Year One",

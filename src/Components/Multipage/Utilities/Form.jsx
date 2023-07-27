@@ -205,9 +205,6 @@ function Form(props) {
                   placeholder="Select the course"
                   type="choice"
                   tabindex="4"
-                  // className="border-solid  border-black outline bg-transparent w-full py-2 my-2"
-                  // onChange={choiceHandler}
-                  // value={choice}
                   required
                 >
                   <option disabled hidden selected>
