@@ -1,12 +1,12 @@
 // eslint
 import "./App.css";
-
 // HOMEPAGE IMPORTS
 import Navbar from "./Components/Navbar";
 import Popup from "./Components/Popup";
 import Announcements from "./Components/Announcements";
 import About from "./Components/About";
 import Courses from "./Components/Courses";
+import Placement from "./Components/Placement";
 import Events from "./Components/Events";
 import Awards from "./Components/Awards";
 import Recruiters from "./Components/Recruiters";
@@ -38,6 +38,8 @@ const Home = () => {
       <About />
       <span id="Courses"></span>
       <Courses />
+      <span id="placement"></span>
+      {/* <Placement /> */}
       <span id="events"></span>
       <Events />
       <span id="awards"></span>
@@ -117,7 +119,7 @@ const InteriorDesign = (props) => {
     <>
       <Form
         coursename="Interior Designing"
-        point1=" Commercial interior designer"
+        point1="Commercial interior designer"
         point2="Residential interior designer"
         point3="Design consultant"
         point4="Cad designer"
@@ -263,6 +265,15 @@ function App() {
                     <>
                       {" "}
                       <Form /> <h1> Beauty and Hair </h1>
+                    </>
+                  }
+                ></Route>
+                <Route path="/Components/Placement"
+                  element={
+                    <>
+                      <Placement />
+                      <Recruiters />
+                      {" "}
                     </>
                   }
                 ></Route>

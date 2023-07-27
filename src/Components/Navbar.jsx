@@ -26,6 +26,7 @@ const Navbar = () => {
       ],
     },
     { name: "CONTACT", link: "#contact" },
+    {name: "PLACEMENT", link: "/Components/Placement", subLink: ""},
   ];
 
   let [open, setOpen] = useState(false);
