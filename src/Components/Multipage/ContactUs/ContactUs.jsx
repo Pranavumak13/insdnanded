@@ -1,6 +1,7 @@
 import emailjs from "@emailjs/browser";
 import React, { useState } from "react";
 import { useRef } from "react";
+import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPaperPlane,
@@ -12,6 +13,11 @@ import "./ContactUs.css";
 export default function ContactUs() {
   const form = useRef();
   const [disabled, setDisabled] = useState(false);
+
+  // code for starting the new page from top.
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -53,30 +59,30 @@ export default function ContactUs() {
         <div className="CU-second-container">
           <div className="contact-details">
             <div className="contact-card card-1">
-              <FontAwesomeIcon icon={faPaperPlane} />
-              <button>
-                <a href="mailto:info@insdnanded.com">Email Us</a>
-              </button>
+              <FontAwesomeIcon className="card-icons" icon={faPaperPlane} />
+              <a href="mailto:info@insdnanded.com">Email Us</a>
               <p>Our team here in Nanded will get back to you in no time.</p>
             </div>
             <div className="contact-card card-2">
-              <FontAwesomeIcon icon={faLocationDot} />
-              <button style={{ marginTop: 24 }}>
-                {" "}
-                <a href="https://goo.gl/maps/ViPvVwacVrZLgaAc6">
+              <FontAwesomeIcon className="card-icons" icon={faLocationDot} />
+              <>
+                <a
+                  href="https://goo.gl/maps/ViPvVwacVrZLgaAc6"
+                  style={{ marginTop: 24 }}
+                >
                   Collge Location
-                </a>{" "}
-              </button>
+                </a>
+              </>
               <p>
                 1st Floor, Bhagwati plaza, Beside Union Bank, Ashok Nagar,
                 Bhagya Nagar Road, Nanded.
               </p>
             </div>
             <div className="contact-card card-3">
-              <FontAwesomeIcon icon={faPhoneVolume} />
-              <button>
+              <FontAwesomeIcon className="card-icons" icon={faPhoneVolume} />
+              <>
                 <a href="tel:+91 9665070493">Call Us</a>
-              </button>
+              </>
               <p>
                 Just Dial: 8605431313, <br /> 9665070493
               </p>

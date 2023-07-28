@@ -88,7 +88,7 @@ function Courses() {
             Book your Admission at Best Fashion Design School in India.
           </p>
           <br />
-          <a href="/coursers/fashiondesign">
+          <a href="/courses/fashiondesign">
             <button>Apply now</button>
           </a>
         </>
@@ -116,7 +116,9 @@ function Courses() {
             in India.
           </p>
           <br />
-          <button>Apply now</button>
+          <a href="/courses/interiordesign">
+            <button>Apply now</button>
+          </a>
         </>
       );
     } else if (selectedCourse === "textile") {
@@ -140,7 +142,9 @@ function Courses() {
             extraordinary Designs on the fabrics.
           </p>
           <br />
-          <button>Apply now</button>
+          <a href="/courses/textiledesign">
+            <button>Apply now</button>
+          </a>
         </>
       );
     } else if (selectedCourse === "jewellery") {
@@ -164,7 +168,9 @@ function Courses() {
             start with Jewellery Designing Courses at INSD Nanded.
           </p>
           <br />
-          <button>Apply now</button>
+          <a href="/courses/jewellerydesign">
+            <button>Apply now</button>
+          </a>
         </>
       );
     } else if (selectedCourse === "graphic") {
@@ -190,7 +196,9 @@ function Courses() {
             two-dimensional animators.
           </p>
           <br />
-          <button>Apply now</button>
+          <a href="/courses/graphicdesign">
+            <button>Apply now</button>
+          </a>
         </>
       );
     } else if (selectedCourse === "animation & vfx") {
@@ -216,7 +224,9 @@ function Courses() {
             Art.
           </p>
           <br />
-          <button>Apply now</button>
+          <a href="/courses/animation_VFX_design">
+            <button>Apply now</button>
+          </a>
         </>
       );
     } else if (selectedCourse === "photography") {
@@ -246,7 +256,9 @@ function Courses() {
             product photography, fashion photography etc.
           </p>
           <br />
-          <button>Apply now</button>
+          <a href="/courses/photographydesign">
+            <button>Apply now</button>
+          </a>
         </>
       );
     } else if (selectedCourse === "beauty & hair") {
@@ -269,7 +281,9 @@ function Courses() {
             <br />
           </p>
           <br />
-          <button>Apply now</button>
+          <a href="/courses/beautyhairdesign">
+            <button>Apply now</button>
+          </a>
         </>
       );
     }
