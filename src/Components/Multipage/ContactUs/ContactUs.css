@@ -6,8 +6,25 @@
 
 .CU-first-container {
   height: 108px;
-  text-align: center;
+  /* text-align: center; */
   padding-top: 20px;
+  border: #000 1px solid;
+  height: 200px;
+  width: 100%;
+  color: #ffffff;
+  background-image: var(--lineargrad);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CU-first-container h1 {
+  font-size: 3.5rem;
+}
+
+.CU-first-container p {
+  font-size: 1.2rem;
 }
 
 /* ----------------------- Second Container ------------------------------------------ */
@@ -36,8 +53,8 @@
   justify-content: space-around;
   border: 1px solid #e2e2e3;
 
-  /* Border Color as Linear Gradient
-  border: 1px solid;
+  /* Border Color as Linear Gradient */
+  /* border: 1px solid;
   border-image: linear-gradient(
       90deg,
       rgba(233, 68, 132, 1),
@@ -46,24 +63,27 @@
     1; */
 }
 
-.contact-card button {
+.contact-card a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 40px;
-  width: 90%;
-
-  /* As a Linear Gradient*/
-  /* background-image: linear-gradient(
-    90deg,
-    rgba(233, 68, 132, 1) 0%,
-    rgba(230, 143, 92, 1) 100%
-  ); */
-
-  /* Or as a Black BG */
+  width: 80%;
   background-color: #000;
   color: #fff;
+  transition: all 0.5s ease-in-out;
 }
 
-.contact-card > svg {
+.contact-card a:hover {
+  background-image: var(--lineargrad);
+}
+
+.card-icons {
   font-size: 3rem;
+  transition: all 0.2s ease-in-out;
+}
+.card-icons:hover {
+  color: #e76572;
 }
 
 .card-1 > p {
@@ -109,7 +129,7 @@
 
 .CU-third-container {
   width: 100%;
-  height: 700px;
+  height: 650px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,6 +161,12 @@
   width: 200px;
   background-color: #000;
   color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+.CU-button:hover {
+  background-image: var(--lineargrad);
+  transition: all 0.5 ease-in-out;
 }
 
 .form-control {
@@ -313,10 +339,12 @@ label.error {
 
 @media only screen and (max-width: 768px) {
   .Frame-container {
+    height: auto;
+    min-height: 400px;
     position: relative;
     overflow: hidden;
-    width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    width: 90%;
+    padding-top: 90%;
   }
 
   .Frame-container iframe {

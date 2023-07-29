@@ -6,10 +6,10 @@ import { Link as Navlink } from "react-router-dom";
 const Navbar = () => {
   let Links = [
     { name: "HOME", link: "/" },
-    { name: "ABOUT", link: "#about" },
+    { name: "ABOUT", hash: "#about" },
     {
       name: "COURSES",
-      link: "#",
+      link: "/courses/fashiondesign",
       /* Added the sublinks */
       subLinks: [
         { name: "FASHION DESIGNING", link: "/courses/fashiondesign" },
@@ -25,9 +25,8 @@ const Navbar = () => {
         { name: "BEAUTY & HAIR DESIGNING", link: "/courses/beautyhairdesign" },
       ],
     },
-    {name: "PLACEMENT", link: "/Components/Placement"},
+    { name: "PLACEMENT", link: "/Components/Placement" },
     { name: "CONTACT", link: "/contact" },
-
   ];
 
   let [open, setOpen] = useState(false);

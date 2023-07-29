@@ -31,6 +31,7 @@ import {
 } from "./Components/Multipage/Courses/CoursesData";
 import { Routes, Route, Link } from "react-router-dom";
 
+
 // HOMEPAGE
 const Home = () => {
   return (
