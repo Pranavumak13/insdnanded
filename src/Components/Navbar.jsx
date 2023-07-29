@@ -25,7 +25,7 @@ const Navbar = () => {
         { name: "BEAUTY & HAIR DESIGNING", link: "/courses/beautyhairdesign" },
       ],
     },
-    { name: "PLACEMENT", link: "/Components/Placement" },
+    { name: "PLACEMENT", link: "/placement" },
     { name: "CONTACT", link: "/contact" },
   ];
 

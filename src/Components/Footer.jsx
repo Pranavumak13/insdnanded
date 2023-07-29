@@ -88,10 +88,13 @@ export default function Footer() {
           <div className="grid grid-cols-1 text-center  md:grid-cols-1 justify-between gap-3 md:ml-40  md:text-left">
             <ul className="mb-6" style={{ alignItems: "center" }}>
               <FooterLink name="Home" linkto="#home" />
-              <FooterLink name="About Us" linkto="#about" />
-              <FooterLink name="Events" linkto="#events" />
+              {/* <FooterLink name="About Us" linkto="#about" /> */}
+              {/* <FooterLink name="Events" linkto="#events" /> */}
+              <FooterLink name="Courses" linkto="#Courses"/>
               <FooterLink name="Awards" linkto="#awards" />
-              <li>
+              <FooterLink name="Placements" linkto="/placement"/>
+              
+             <li>
                 <Typography
                   as="a"
                   href={Brochure}
@@ -101,6 +104,7 @@ export default function Footer() {
                   Brochure
                 </Typography>
               </li>
+              <FooterLink name="Contact Us" linkto="/contact"/>
             </ul>
           </div>
 
@@ -213,7 +217,7 @@ export default function Footer() {
           color="white"
           className="mb-4 text-center font-normal md:mb-0"
         >
-          &copy; {currentYear} INSDnanded |
+          &copy; {currentYear} INSDNanded |
           <a href="/"> Web Development By Team APJ</a>
         </Typography>
       </div>

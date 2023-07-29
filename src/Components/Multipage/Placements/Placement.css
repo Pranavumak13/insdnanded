@@ -3,12 +3,12 @@
     display: flex;
     align-items: end;
     background: var(--lineargrad); 
-    height: 250px;
+    height: 200px;
     color: white;
 }
 
 .topsection h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: bold;
     margin: 20px 50px;
 }
@@ -115,6 +115,8 @@
 
     .topsection {
         height: 140px;
+        align-items: center;
+        justify-content: center;
     }
 
     .topsection h1 {
@@ -144,7 +146,7 @@
     }
 
     .para p {
-        font-size: 13px;
+        font-size: 15px;
         padding: 20px;
         color: #4B4655;
     }
@@ -167,7 +169,7 @@
     }
 
     .middlesection h2 {
-        color: #E7DBCE;
+        color: #ffffff;
         font-size: 20px;
         padding: 10px;
     }
