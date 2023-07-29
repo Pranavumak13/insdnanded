@@ -63,7 +63,11 @@ function Form(props) {
       );
   };
   return (
-    <div className="containerform">
+    <div className="janhvi">
+      <div className='topsection'>
+           <h1>{props.coursename}</h1>
+      </div>
+      <div className="containerform">
       <div className="leftcontainer">
         <div class="leftContainer-content">
           <h1>Career Paths after {props.coursename} Course in Nanded</h1>
@@ -242,6 +246,7 @@ function Form(props) {
             </form>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

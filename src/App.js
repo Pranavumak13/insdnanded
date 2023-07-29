@@ -6,7 +6,7 @@ import Popup from "./Components/Popup";
 import Announcements from "./Components/Announcements";
 import About from "./Components/About";
 import Courses from "./Components/Courses";
-import Placement from "./Components/Placement";
+import Placement from "./Components/Multipage/Placements/Placement";
 import Events from "./Components/Events";
 import Awards from "./Components/Awards";
 import Recruiters from "./Components/Recruiters";
@@ -59,7 +59,9 @@ const Home = () => {
 const FashionDesign = (props) => {
   return (
     <>
+      
       <Form
+        name="Fashion"
         coursename="Fashion Designing"
         point1="Designer/Assistant Designer"
         point2="Fashion Illustrator"
@@ -133,6 +135,7 @@ const InteriorDesign = (props) => {
         point7="Institutional interior designer"
         point8="Lighting designer"
         point9="Freelancer designer"
+        point10="Interior Stylist"
       />
       <ButtonData dataobj={interior} />
     </>
@@ -274,7 +277,7 @@ function App() {
                     </>
                   }
                 ></Route>
-                <Route path="/Components/Placement"
+                <Route path="/placement"
                   element={
                     <>
                       <Placement />
