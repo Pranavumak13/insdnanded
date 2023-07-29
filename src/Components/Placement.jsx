@@ -6,15 +6,16 @@ const Placement = () => {
       <div className='topsection'>
            <h1>Placements</h1>
       </div>
+      <div className='janhvi'>
       <div className='placementcell'>
         <div className='para'>
           <h2>Placement Cell</h2>
           <p>Every academic year will see a placement fair accompanying major recruiters including Vogue Interior, Fine Edge ,Orient Craft ,P.C Chandra Jewellers , Marks & Spencer to name a few. Prior to the placement fair we provide workshops on Resume building, cover letter writing, cracking aptitude test along with their regular curriculum of theory and practicals which give the students a hands-on experience in understanding the dynamics of the industry. Conducting mock interviews, encouraging students to build good connections in the industry, helping students to understand the job profile and the growth prospects of any job opportunity is a vital part of the placement cell. Not only in-house faculties but also live interaction with industry experts, professional trainers contribute to grooming and shaping the students in order to face the competitive industrial world.</p></div>
         <div className='pararight'>
-          <img src="/Branding Posters_Final_12.jpg" alt="jan" />
-          <img src="/Branding Posters_Final_14.jpg" alt="jan" />
-          <img src="/Branding Posters_Final_13.jpg" alt="jan" />
+          <img src="/placement.jpeg" alt="jan" />
+         
         </div>
+      </div>
       </div>
       <div className='content'>
         <div className='middlesection'>

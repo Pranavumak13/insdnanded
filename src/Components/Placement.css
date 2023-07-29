@@ -2,7 +2,7 @@
     margin: 0 0;
     display: flex;
     align-items: end;
-    background: linear-gradient(90deg, rgba(233, 68, 132, 1) 0%, rgba(230, 143, 92, 1) 100%);
+    background: var(--lineargrad); 
     height: 250px;
     color: white;
 }
@@ -17,6 +17,8 @@
     display: flex;
     padding: 20px;
     margin: 30px;
+    margin-bottom: 0px;
+    font-size: larger;
 }
 
 .para {
@@ -27,7 +29,9 @@
     background-color: transparent;
     transition: .3s all ease;
     padding: 30px;
-    height: 500px;
+    max-width: 60%;
+    color: #ffffff;
+    background: var(--lineargrad);
 }
 
 .para h2 {
@@ -35,7 +39,7 @@
 }
 
 .para p {
-    color: #858484;
+    color: #ffffff;
     text-align: justify;
 }
 
@@ -45,8 +49,8 @@
 }
 
 .pararight {
+    max-width: 40%;
     display: flex;
-    height: 500px;
 }
 
 .middlesection {
@@ -64,21 +68,22 @@
     border-radius: 10px;
     transition: all 300ms linear 0s;
 
+
 }
 
 .middle1 {
-    border-left: 5px solid #E7DBCE;
-    border-bottom: 5px solid #E7DBCE;
+    border-left: 5px solid #faf8f6;
+    border-bottom: 5px solid #faf8f6;
 }
 
 .middle2 {
-    border-left: 5px solid #E7DBCE;
-    border-bottom: 5px solid #E7DBCE;
+    border-left: 5px solid #faf8f6;
+    border-bottom: 5px solid #faf8f6;
 }
 
 .middle3 {
-    border-left: 5px solid #E7DBCE;
-    border-bottom: 5px solid #E7DBCE;
+    border-left: 5px solid #faf8f6;
+    border-bottom: 5px solid #faf8f6;
 }
 
 .middlesection h2 {
@@ -92,18 +97,18 @@
 }
 
 .middle1:hover {
-    background: linear-gradient(90deg, rgba(233, 68, 132, 1) 0%, rgba(230, 143, 92, 1) 100%);
+    background: var(--lineargrad);
     color: #ffff;
 }
 
 .middle2:hover {
-    background: linear-gradient(90deg, rgba(233, 68, 132, 1) 0%, rgba(230, 143, 92, 1) 100%);
-    color: #ffff;
+    background: var(--lineargrad);
+     color: #ffff;
 }
 
 .middle3:hover {
-    background: linear-gradient(90deg, rgba(233, 68, 132, 1) 0%, rgba(230, 143, 92, 1) 100%);
-    color: #ffff;
+    background: var(--lineargrad);
+     color: #ffff;
 }
 
 @media only screen and (max-width: 786px) {
@@ -125,10 +130,13 @@
     }
 
     .para {
+        max-width: 100%;
         align-items: center;
         padding: 10px;
         border-top: 5px solid pink;
         box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05);
+        background: white;
+        color: black;
     }
 
     .para h2 {
@@ -138,9 +146,11 @@
     .para p {
         font-size: 13px;
         padding: 20px;
+        color: #4B4655;
     }
 
     .pararight {
+        max-width: 100%;
         height: 300px;
     }
 
@@ -152,8 +162,8 @@
     .middle2,
     .middle3 {
         max-width: 100%;
-        background: linear-gradient(90deg, rgba(233, 68, 132, 1) 0%, rgba(230, 143, 92, 1) 100%);
-        margin: 20px;
+        background: var(--lineargrad);
+         margin: 20px;
     }
 
     .middlesection h2 {
