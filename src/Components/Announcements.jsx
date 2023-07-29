@@ -37,7 +37,7 @@ const Announcements = () => {
         <br />
         <br />
         <a
-          href="#contact"
+          href="#Registercontact"
           style={{
             color: "#4b4655",
             background: "white",

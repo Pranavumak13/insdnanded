@@ -49,7 +49,7 @@ const Home = () => {
       <span id="awards"></span>
       <Awards />
       <Recruiters />
-      <span id="contact"></span>
+      <span id="Registercontact"></span>
       <Contact />
     </>
   );
@@ -60,7 +60,7 @@ const Home = () => {
 const FashionDesign = (props) => {
   return (
     <>
-      
+
       <Form
         name="Fashion"
         coursename="Fashion Designing"
