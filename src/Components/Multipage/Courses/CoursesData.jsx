@@ -47,6 +47,7 @@ export const fashion = {
               "Introduction of Pattern making & GMT",
               "Practical – 1 Portfolio Making",
               "Practical – 2 Pattern Making& Grading",
+              "",
             ],
             credits: 20,
           },
@@ -92,7 +93,7 @@ export const fashion = {
       ],
     },
     diploma_ug: {
-      name: "Diploma Undergraduate",
+      name: "Undergraduate Diploma",
       years: [
         {
           name: "Year One",
@@ -178,7 +179,7 @@ export const fashion = {
       ],
     },
     diploma_pg: {
-      name: "Diploma Postgraduate",
+      name: "Postgraduate Diploma",
       years: [
         {
           name: "Year One",
@@ -562,7 +563,7 @@ export const fashion = {
 export const interior = {
   diploma: {
     diploma_basic: {
-      name: "Diploma in Interior Design & Technology",
+      name: "Diploma",
       years: [
         {
           name: "Year One",
@@ -594,7 +595,7 @@ export const interior = {
       ],
     },
     diploma_adv: {
-      name: "Advance Diploma in Interior Design & Technology",
+      name: "Advance Diploma",
       years: [
         {
           name: "Year One",
@@ -653,11 +654,25 @@ export const interior = {
       ],
     },
     diploma_ug: {
-      name: "-",
-      years: [],
+      name: "Undergraduate Diploma",
+      years: [
+        {
+          name: "Year One",
+          sem1: {
+            name: "Semester One",
+            subjects: [],
+            credits: 20,
+          },
+          sem2: {
+            name: "Semester Two",
+            subjects: [],
+            credits: 20,
+          },
+        },
+      ],
     },
     diploma_pg: {
-      name: "P G Diploma in Interior Design & Technology",
+      name: "Postgraduate Diploma",
       years: [
         {
           name: "Year One",
@@ -978,7 +993,7 @@ export const interior = {
       ],
     },
     mba: {
-      name: "MBA in Interior Design & Technology",
+      name: "M.B.A in Interior Design & Technology",
       years: [
         {
           name: "Year One",
@@ -1516,7 +1531,7 @@ export const graphic = {
       ],
     },
     mba: {
-      name: "MBA in Graphics Design",
+      name: "M.B.A in Graphics Design",
       years: [
         {
           name: "Year One",
@@ -1875,7 +1890,7 @@ export const textile = {
   },
   bachelors: {
     bdesign: {
-      name: "B.Design in Textile Design",
+      name: "B.Design in Textile Design & Technology",
       years: [
         {
           name: "Year One",
@@ -1951,7 +1966,7 @@ export const textile = {
       ],
     },
     bsc: {
-      name: "B.Sc. in Textile Design",
+      name: "B.Sc in Textile Design & Technology",
       years: [
         {
           name: "Year One",
@@ -2016,7 +2031,7 @@ export const textile = {
   },
   masters: {
     mdesign: {
-      name: "M.Design in Textile Design",
+      name: "M.Design in Textile Design & Technology",
       years: [
         {
           name: "Year One",
@@ -2046,8 +2061,8 @@ export const textile = {
         },
       ],
     },
-    msc: {
-      name: "M.Sc. in Textile Design",
+    mba: {
+      name: "M.B.A in Textile Design & Technology",
       years: [
         {
           name: "Year One",
@@ -2192,7 +2207,7 @@ export const animaton = {
       ],
     },
     diploma_ug: {
-      name: "Diploma Undergraduate",
+      name: "Undergraduate Diploma",
       years: [
         {
           name: "Year One",
@@ -2269,11 +2284,28 @@ export const animaton = {
         },
       ],
     },
-    diploma_pg: {},
+    diploma_pg: {
+      name: "Postgraduate Diploma",
+      years: [
+        {
+          name: "Year One",
+          sem1: {
+            name: "Semester One",
+            subjects: [],
+            credits: 20,
+          },
+          sem2: {
+            name: "Semester Two",
+            subjects: [],
+            credits: 20,
+          },
+        },
+      ],
+    },
   },
   bachelors: {
     bsc: {
-      name: "BSC",
+      name: "B.Sc in Animation & VFX Design",
       years: [
         {
           name: "Year One",
@@ -2359,7 +2391,7 @@ export const animaton = {
       ],
     },
     bdesign: {
-      name: "B.Design",
+      name: "B.Design in Animation & VFX Design",
       years: [
         {
           name: "Year One",
@@ -2448,9 +2480,8 @@ export const animaton = {
     },
   },
   masters: {
-    mba: {},
     mdesign: {
-      name: "M.Design",
+      name: "M.Design in Animation & VFX Design",
       years: [
         {
           name: "Year One",
@@ -2503,6 +2534,24 @@ export const animaton = {
               "Introduction To Mel Scripting",
             ],
             credits: 22,
+          },
+        },
+      ],
+    },
+    mba: {
+      name: "M.B.A in Animation & VFX Design",
+      years: [
+        {
+          name: "Year One",
+          sem1: {
+            name: "Semester One",
+            subjects: [],
+            credits: 20,
+          },
+          sem2: {
+            name: "Semester Two",
+            subjects: [],
+            credits: 20,
           },
         },
       ],
@@ -2605,7 +2654,7 @@ export const jwellery = {
       ],
     },
     diploma_ug: {
-      name: "Diploma Undergraduate",
+      name: "Undergraduate Diploma",
       years: [
         {
           name: "Year One",
@@ -2690,10 +2739,23 @@ export const jwellery = {
         },
       ],
     },
+    diploma_pg: {
+      name: "Postgraduate Diploma",
+      years: [
+        {
+          name: "Year One",
+          sem1: {
+            name: "Semester One",
+            subjects: [],
+            credits: 20,
+          },
+        },
+      ],
+    },
   },
   bachelors: {
     bsc: {
-      name: "BSC",
+      name: "B.Sc in Jewellery Designing",
       years: [
         {
           name: "Year One",
@@ -2779,7 +2841,7 @@ export const jwellery = {
       ],
     },
     bdesign: {
-      name: "B.Des",
+      name: "B.Design in Jewellery Design",
       years: [
         {
           name: "Year One",
@@ -2888,9 +2950,26 @@ export const jwellery = {
     },
   },
   masters: {
-    mba: {},
+    mba: {
+      name: "M.B.A in Jewellery Design",
+      years: [
+        {
+          name: "Year One",
+          sem1: {
+            name: "Semester One",
+            subjects: [],
+            credits: 20,
+          },
+          sem2: {
+            name: "Semester Two",
+            subjects: [],
+            credits: 20,
+          },
+        },
+      ],
+    },
     mdesign: {
-      name: "M.Des",
+      name: "M.Design in Jewellery Design",
       years: [
         {
           name: "Year One",

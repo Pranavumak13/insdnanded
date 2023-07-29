@@ -6,7 +6,7 @@ import { Link as Navlink } from "react-router-dom";
 const Navbar = () => {
   let Links = [
     { name: "HOME", link: "/" },
-    { name: "ABOUT", hash: "#about" },
+    // { name: "ABOUT", link: "/#about" },
     {
       name: "COURSES",
       link: "/courses/fashiondesign",
@@ -21,8 +21,8 @@ const Navbar = () => {
           name: "ANIMATION & VFX DESIGNING",
           link: "/courses/animation_VFX_design",
         },
-        { name: "PHOTOGRAPHY DESIGNING", link: "/courses/photographydesign" },
-        { name: "BEAUTY & HAIR DESIGNING", link: "/courses/beautyhairdesign" },
+        // { name: "PHOTOGRAPHY DESIGNING", link: "/courses/photographydesign" },
+        // { name: "BEAUTY & HAIR DESIGNING", link: "/courses/beautyhairdesign" },
       ],
     },
     { name: "PLACEMENT", link: "/placement" },
@@ -89,18 +89,18 @@ const Navbar = () => {
               onMouseEnter={() => Link.subLinks && setDropdownOpen(true)} // Code to dropdown on hover
               onMouseLeave={() => Link.subLinks && setDropdownOpen(false)}
             >
-              <Navlink
-                to={Link.link}
+              <a
+                href={Link.link}
                 className="text-black hover:text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-orange-400 to-red-400"
               >
                 {Link.name}
-              </Navlink>
+              </a>
               {Link.subLinks &&
                 dropdownOpen && ( // Added the sublinks code.
                   <ul className="courses-dropdown-menu">
                     {Link.subLinks.map((subLink) => (
                       <li key={subLink.name}>
-                        <a href={subLink.link}>{subLink.name}</a>
+                        <Navlink to={subLink.link}>{subLink.name}</Navlink>
                       </li>
                     ))}
                   </ul>

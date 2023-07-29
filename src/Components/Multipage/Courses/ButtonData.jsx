@@ -159,6 +159,8 @@ function ButtonData(props) {
   //Data
   const Data = () => {
     const [selectedYear, setSelectedYear] = useState(0);
+    let listOne = [];
+    let listTwo = [];
 
     const renderTitle = () => {
       return (
@@ -167,6 +169,22 @@ function ButtonData(props) {
         </div>
       );
     };
+
+    const renderTableList = () => {
+      for (
+        var i = 0;
+        i <
+        Math.max(
+          currentSubObject.years[selectedYear].sem1.subjects.length,
+          currentSubObject.years[selectedYear].sem2.subjects.length
+        );
+        i++
+      ) {
+        listOne.push(currentSubObject.years[selectedYear].sem1.subjects[i]);
+        listTwo.push(currentSubObject.years[selectedYear].sem2.subjects[i]);
+      }
+    };
+    renderTableList();
 
     return (
       <div className="course-data">
@@ -203,7 +221,7 @@ function ButtonData(props) {
                 >
                   {currentSubObject.years[selectedYear].sem1.name}
                 </div>
-                {currentSubObject.years[selectedYear].sem1.subjects.map((i) => {
+                {listOne.map((i) => {
                   return (
                     <div style={{ borderRight: "dotted 1px #000" }}>{i}</div>
                   );
@@ -216,7 +234,7 @@ function ButtonData(props) {
                 >
                   {currentSubObject.years[selectedYear].sem2.name}
                 </div>
-                {currentSubObject.years[selectedYear].sem2.subjects.map((i) => {
+                {listTwo.map((i) => {
                   return <div>{i}</div>;
                 })}
               </div>

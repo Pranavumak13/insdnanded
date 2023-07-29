@@ -5,6 +5,12 @@
   margin-top: 30px;
 }
 
+/* .topsection {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+} */
+
 .leftcontainer {
   height: 100vh;
   width: 50%;
@@ -24,6 +30,7 @@
   align-items: center;
   justify-content: center;
   gap: 50px;
+  padding: 0 24px;
   font-size: 1rem;
 }
 
@@ -89,7 +96,7 @@
 }
 
 #contact {
-  background: #ffffff;
+  background: #fff;
   padding: 25px;
   margin: 150px 0;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -143,7 +150,7 @@ fieldset {
   margin: 0 0;
   display: flex;
   align-items: end;
-  background: var(--lineargrad); 
+  background: var(--lineargrad);
   height: 200px;
   color: white;
 }
@@ -215,12 +222,12 @@ fieldset {
     height: 140px;
     align-items: center;
     justify-content: center;
-}
+  }
 
-.topsection h1 {
+  .topsection h1 {
     font-size: 2rem;
     margin: 20px 30px;
-}
+  }
 
   .containerform {
     flex-direction: column;
@@ -235,6 +242,11 @@ fieldset {
 
   .leftContainer-content {
     padding-top: 30px;
+  }
+
+  .leftcontainer {
+    min-height: 400px;
+    height: auto;
   }
 
   .listmain {

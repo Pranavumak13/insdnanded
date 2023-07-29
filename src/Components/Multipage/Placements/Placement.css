@@ -1,182 +1,176 @@
 .topsection {
-    margin: 0 0;
-    display: flex;
-    align-items: end;
-    background: var(--lineargrad); 
-    height: 200px;
-    color: white;
+  margin: 0 0;
+  display: flex;
+  align-items: end;
+  background: var(--lineargrad);
+  height: 250px;
+  color: white;
 }
 
 .topsection h1 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    margin: 20px 50px;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 20px 50px;
 }
 
 .placementcell {
-    display: flex;
-    padding: 20px;
-    margin: 30px;
-    margin-bottom: 0px;
-    font-size: larger;
+  display: flex;
+  padding: 20px;
+  margin: 30px;
+  margin-bottom: 0px;
+  font-size: larger;
 }
 
 .para {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    background-color: transparent;
-    transition: .3s all ease;
-    padding: 30px;
-    max-width: 60%;
-    color: #ffffff;
-    background: var(--lineargrad);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: transparent;
+  transition: 0.3s all ease;
+  padding: 30px;
+  max-width: 60%;
+  color: #ffffff;
+  background: var(--lineargrad);
 }
 
 .para h2 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .para p {
-    color: #ffffff;
-    text-align: justify;
+  color: #ffffff;
+  text-align: justify;
 }
 
 .para:hover {
-    border: 1px solid transparent;
-    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid transparent;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05);
 }
 
 .pararight {
-    max-width: 40%;
-    display: flex;
+  max-width: 40%;
+  display: flex;
 }
 
 .middlesection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .middle1,
 .middle2,
 .middle3 {
-    max-width: 60%;
-    margin: 10px;
-    transition: all 300ms linear 0s;
-    border-radius: 10px;
-    transition: all 300ms linear 0s;
-
-
+  max-width: 60%;
+  margin: 10px;
+  transition: all 300ms linear 0s;
+  border-radius: 10px;
+  transition: all 300ms linear 0s;
 }
 
 .middle1 {
-    border-left: 5px solid #faf8f6;
-    border-bottom: 5px solid #faf8f6;
+  border-left: 5px solid #faf8f6;
+  border-bottom: 5px solid #faf8f6;
 }
 
 .middle2 {
-    border-left: 5px solid #faf8f6;
-    border-bottom: 5px solid #faf8f6;
+  border-left: 5px solid #faf8f6;
+  border-bottom: 5px solid #faf8f6;
 }
 
 .middle3 {
-    border-left: 5px solid #faf8f6;
-    border-bottom: 5px solid #faf8f6;
+  border-left: 5px solid #faf8f6;
+  border-bottom: 5px solid #faf8f6;
 }
 
 .middlesection h2 {
-    padding-top: 15px;
-    text-align: center;
+  padding-top: 15px;
+  text-align: center;
 }
 
 .middlesection p {
-    padding: 40px;
-    text-align: justify;
+  padding: 40px;
+  text-align: justify;
 }
 
 .middle1:hover {
-    background: var(--lineargrad);
-    color: #ffff;
+  background: var(--lineargrad);
+  color: #ffff;
 }
 
 .middle2:hover {
-    background: var(--lineargrad);
-     color: #ffff;
+  background: var(--lineargrad);
+  color: #ffff;
 }
 
 .middle3:hover {
-    background: var(--lineargrad);
-     color: #ffff;
+  background: var(--lineargrad);
+  color: #ffff;
 }
 
 @media only screen and (max-width: 786px) {
+  .topsection {
+    height: 140px;
+  }
 
-    .topsection {
-        height: 140px;
-        align-items: center;
-        justify-content: center;
-    }
+  .topsection h1 {
+    font-size: 2rem;
+    margin: 20px 30px;
+  }
 
-    .topsection h1 {
-        font-size: 2rem;
-        margin: 20px 30px;
-    }
+  .placementcell {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px 0px;
+  }
 
-    .placementcell {
-        display: flex;
-        flex-direction: column;
-        padding: 0px;
-        margin: 0px 0px;
-    }
+  .para {
+    max-width: 100%;
+    align-items: center;
+    padding: 10px;
+    border-top: 5px solid pink;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05);
+    background: white;
+    color: black;
+  }
 
-    .para {
-        max-width: 100%;
-        align-items: center;
-        padding: 10px;
-        border-top: 5px solid pink;
-        box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05);
-        background: white;
-        color: black;
-    }
+  .para h2 {
+    margin-bottom: 10px;
+  }
 
-    .para h2 {
-        margin-bottom: 10px;
-    }
+  .para p {
+    font-size: 15px;
+    padding: 20px;
+    color: #4b4655;
+  }
 
-    .para p {
-        font-size: 15px;
-        padding: 20px;
-        color: #4B4655;
-    }
+  .pararight {
+    max-width: 100%;
+    height: 300px;
+  }
 
-    .pararight {
-        max-width: 100%;
-        height: 300px;
-    }
+  .middlesection {
+    margin-top: 30px;
+  }
 
-    .middlesection {
-        margin-top: 30px;
-    }
+  .middle1,
+  .middle2,
+  .middle3 {
+    max-width: 100%;
+    background: var(--lineargrad);
+    margin: 20px;
+  }
 
-    .middle1,
-    .middle2,
-    .middle3 {
-        max-width: 100%;
-        background: var(--lineargrad);
-         margin: 20px;
-    }
+  .middlesection h2 {
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px;
+  }
 
-    .middlesection h2 {
-        color: #ffffff;
-        font-size: 20px;
-        padding: 10px;
-    }
-
-    .middlesection p {
-        color: #4B4655;
-        padding: 20px;
-    }
-
+  .middlesection p {
+    color: #4b4655;
+    padding: 20px;
+  }
 }

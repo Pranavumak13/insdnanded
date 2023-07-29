@@ -173,7 +173,7 @@ function Form(props) {
               method="post"
             >
               <h3>Reach Out to Us</h3>
-              <h4>Contact us for custom quote</h4>
+              <h4>Contact us for custom quote.</h4>
               <fieldset>
                 <input
                   placeholder="Your name"

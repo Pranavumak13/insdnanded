@@ -257,7 +257,14 @@ function Courses() {
           </p>
           <br />
           <a href="/courses/photographydesign">
-            <button>Apply now</button>
+            <button
+              onClick={(event) => {
+                event.preventDefault();
+                alert("Coming Soon..!");
+              }}
+            >
+              Apply now
+            </button>
           </a>
         </>
       );
@@ -282,7 +289,14 @@ function Courses() {
           </p>
           <br />
           <a href="/courses/beautyhairdesign">
-            <button>Apply now</button>
+            <button
+              onClick={(event) => {
+                event.preventDefault();
+                alert("Coming Soon..!");
+              }}
+            >
+              Apply now
+            </button>
           </a>
         </>
       );

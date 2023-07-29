@@ -8,7 +8,7 @@
   height: 108px;
   /* text-align: center; */
   padding-top: 20px;
-  border: #000 1px solid;
+  border: none;
   height: 200px;
   width: 100%;
   color: #ffffff;
@@ -21,10 +21,26 @@
 
 .CU-first-container h1 {
   font-size: 3.5rem;
+  font-weight: bold;
 }
 
 .CU-first-container p {
   font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .CU-first-container {
+    height: 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .CU-first-container h1 {
+    font-size: 2.5rem;
+  }
+  .CU-first-container p {
+    font-size: 1rem;
+  }
 }
 
 /* ----------------------- Second Container ------------------------------------------ */
