@@ -89,12 +89,12 @@ const Navbar = () => {
               onMouseEnter={() => Link.subLinks && setDropdownOpen(true)} // Code to dropdown on hover
               onMouseLeave={() => Link.subLinks && setDropdownOpen(false)}
             >
-              <a
-                href={Link.link}
+              <Navlink
+                to={Link.link}
                 className="text-black hover:text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-orange-400 to-red-400"
               >
                 {Link.name}
-              </a>
+              </Navlink>
               {Link.subLinks &&
                 dropdownOpen && ( // Added the sublinks code.
                   <ul className="courses-dropdown-menu">
