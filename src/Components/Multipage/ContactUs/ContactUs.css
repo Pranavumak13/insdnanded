@@ -6,7 +6,6 @@
 
 .CU-first-container {
   height: 108px;
-  /* text-align: center; */
   padding-top: 20px;
   border: none;
   height: 200px;
@@ -221,6 +220,7 @@
   padding-right: 0;
   border-radius: 0;
   width: 25rem;
+  background-color: white;
 }
 .custom-select:active,
 .custom-select:focus {

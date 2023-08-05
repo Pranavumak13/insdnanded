@@ -1,3 +1,9 @@
+.form-main-container {
+  margin: 0 0;
+  padding: 0 0;
+  box-sizing: border-box;
+}
+
 .containerform {
   display: flex;
   justify-content: space-evenly;
@@ -5,13 +11,8 @@
   margin-top: 30px;
 }
 
-/* .topsection {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-} */
-
 .leftcontainer {
+  margin-top: 0;
   height: 100vh;
   width: 50%;
   display: flex;
@@ -219,14 +220,14 @@ fieldset {
 
 @media only screen and (max-width: 768px) {
   .topsection {
-    height: 140px;
+    height: 200px;
     align-items: center;
     justify-content: center;
   }
 
   .topsection h1 {
-    font-size: 2rem;
-    margin: 20px 30px;
+    font-size: 2.3rem;
+    margin: 0 0;
   }
 
   .containerform {
@@ -254,111 +255,3 @@ fieldset {
     gap: 10px;
   }
 }
-
-/* .containerform {
-  display: flex;
-  flex-direction: row;
-  margin-left: 200px;
-  margin-right: 200px;
-  justify-content: center;
-  align-items: center;
-  padding: 100px 0px;
-}
-
-.leftcontainer {
-  justify-content: center;
-  align-items: center;
-  margin-left: 80px;
-}
-.listmain {
-  flex: 0.5;
-  display: flex;
-  
-  margin-top: 20px;
-  gap: 40px;
-  font-size: larger;
-}
-.rightmost {
-  display: flex;
-  flex: 0.4;
-  align-items: center;
-  justify-content: center;
-}
-.rightcontainer {
-  background-image: linear-gradient(
-    90deg,
-    rgba(233, 68, 132, 1) 0%,
-    rgba(230, 143, 92, 1) 100%
-  );
-  width: 700px;
-  height: 750px;
-  border-radius: 20px;
-}
-.innerRight {
-  background-color: white;
-  width: 500px;
-  height: 600px;
-  margin-left: 80px;
-  margin-right: 80px;
-  margin-top: 18px;
-  margin-bottom: 60px;
-  border-radius: 20px;
-}
-.rightcontainer h1 {
-  color: white;
-  font-family: sans-serif;
-  margin-left: 80px;
-  margin-top: 30px;
-  font-size: xx-large;
-}
-
-.gradient-image {
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-}
-.list1 .l1,
-.l2,
-.l3,
-.l4,
-.l5 {
-  margin-top: 20px;
-  display: flex;
-  gap: 10px;
-}
-.list2 .l6,
-.l7,
-.l8,
-.l9,
-.l10 {
-  margin-top: 20px;
-  display: flex;
-  gap: 10px;
-}
-#full-name3,
-#email3,
-#phone-number3,
-#courses3,
-#message3 {
-  margin-left: 40px;
-}
-#label3 {
-  margin-left: 40px;
-}
-
-#button3 {
-  margin-left: 40px;
-  border-radius: 20px;
-}
-
-@media only screen and (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    gap: 100px;
-  }
-
-  .listmain {
-    flex-direction: column;
-    gap: 0px;
-  }
-} */

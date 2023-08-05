@@ -1,13 +1,13 @@
-.topsection {
+.placement-topsection {
   margin: 0 0;
   display: flex;
   align-items: end;
   background: var(--lineargrad);
-  height: 250px;
+  height: 200px;
   color: white;
 }
 
-.topsection h1 {
+.placement-topsection h1 {
   font-size: 3.5rem;
   font-weight: bold;
   margin: 20px 50px;
@@ -51,6 +51,12 @@
 .pararight {
   max-width: 40%;
   display: flex;
+}
+
+.pararight img {
+  width: 100%;
+  height: 100%;
+  object-fit: unset;
 }
 
 .middlesection {
@@ -110,13 +116,16 @@
 }
 
 @media only screen and (max-width: 786px) {
-  .topsection {
-    height: 140px;
+  .placement-topsection {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .topsection h1 {
-    font-size: 2rem;
-    margin: 20px 30px;
+  .placement-topsection h1 {
+    font-size: 2.5rem;
+    margin: 0 0;
   }
 
   .placementcell {
@@ -134,6 +143,17 @@
     box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05);
     background: white;
     color: black;
+    min-height: 300px;
+    height: auto;
+  }
+
+  .pararight {
+    max-width: 100%;
+    background-color: #ffffff;
+  }
+
+  .pararight img {
+    object-fit: contain;
   }
 
   .para h2 {

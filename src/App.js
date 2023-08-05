@@ -6,7 +6,6 @@ import Popup from "./Components/Popup";
 import Announcements from "./Components/Announcements";
 import About from "./Components/About";
 import Courses from "./Components/Courses";
-import Placement from "./Components/Multipage/Placements/Placement";
 import Events from "./Components/Events";
 import Awards from "./Components/Awards";
 import Recruiters from "./Components/Recruiters";
@@ -15,6 +14,13 @@ import Footer from "./Components/Footer";
 import Form from "./Components/Multipage/Utilities/Form";
 import { Analytics } from "@vercel/analytics/react";
 
+// About Us Page
+import TechCollab from "./Components/Multipage/DiscoverUs/TechCollab";
+import AboutUs from "./Components/Multipage/DiscoverUs/AboutUs";
+import AboutCampus from "./Components/Multipage/DiscoverUs/AboutCampus";
+
+// Placement Page
+import Placement from "./Components/Multipage/Placements/Placement";
 //Contact Us
 import ContactUs from "./Components/Multipage/ContactUs/ContactUs";
 
@@ -205,8 +211,28 @@ function App() {
               <Navbar />
               <span id="home"></span>
               <Routes>
+                {/* Home */}
                 <Route path="/" element={<Home />}></Route>
+                {/* Contact Page */}
                 <Route path="/contact" element={<ContactUs />}></Route>
+                {/* Placement Page */}
+                <Route path="/placement"
+                  element={
+                    <>
+                      <Placement />
+                      <Recruiters />
+                      {" "}
+                    </>
+                  }
+                ></Route>
+                {/* Discover Us */}
+                <Route path="/discoverus/techcollab" element={
+                  <>
+                    <AboutUs />
+                    <AboutCampus />
+                    <TechCollab />
+                  </>}></Route>
+                {/* Courses */}
                 <Route
                   path="/courses/fashiondesign"
                   element={
@@ -275,15 +301,6 @@ function App() {
                     <>
                       {" "}
                       <Form /> <h1> Beauty and Hair </h1>
-                    </>
-                  }
-                ></Route>
-                <Route path="/placement"
-                  element={
-                    <>
-                      <Placement />
-                      <Recruiters />
-                      {" "}
                     </>
                   }
                 ></Route>
