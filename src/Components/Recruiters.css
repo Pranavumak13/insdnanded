@@ -39,12 +39,12 @@
   perspective: 100px;
 }
 
-img {
+.recruiters img {
   width: 100%;
   transition: transform 1s;
 }
 
-img:hover {
+.recruiters img:hover {
   transform: translateZ(20px);
 }
 

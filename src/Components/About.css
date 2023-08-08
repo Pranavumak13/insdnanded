@@ -36,7 +36,7 @@
 
 .about-list button {
   box-shadow: 0px 0px 16px #0004;
-  font-size: 16px;
+  font-size: 1rem;
   padding: 16px 12px;
   margin: 4px;
   border-radius: 30px;
@@ -69,8 +69,13 @@
     flex-direction: row;
   }
 
+  .about-content {
+    margin-top: 5rem;
+    justify-content: flex-start;
+  }
+
   .about-list button {
-    font-size: 22px;
+    font-size: 1.4rem;
     padding: 16px 32px;
     border-radius: 30px;
     border: none;
