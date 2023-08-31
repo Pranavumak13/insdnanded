@@ -52,6 +52,33 @@
   background-color: #000a;
 }
 
+.gallery-modal .gallery-pagination {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 50px;
+  color: #fff;
+  font-size: 28px;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.gallery-modal .gp-left {
+  left: 0;
+}
+.gallery-modal .gp-left:hover {
+  background-image: linear-gradient(90deg, #0003, #0000);
+}
+
+.gallery-modal .gp-right {
+  right: 0;
+}
+.gallery-modal .gp-right:hover {
+  background-image: linear-gradient(270deg, #0003, #0000);
+}
+
 .gallery-modal .gallery-image {
   pointer-events: none;
   position: absolute;
@@ -68,7 +95,6 @@
   max-width: 90vw;
   max-height: 90vh;
   transition: scale 0.5s;
-  cursor: grab;
   transform-origin: center;
 }
 
@@ -105,5 +131,8 @@
 
   .gallery-list ul {
     gap: 1.5em;
+  }
+  .gallery-modal .gallery-pagination {
+    display: flex;
   }
 }

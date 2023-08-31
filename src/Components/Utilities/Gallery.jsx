@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import "./Gallery.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -11,106 +11,131 @@ import {
 
 function Gallery(props) {
   const imageRef = useRef();
+  const [isOpen, setIsOpen] = useState(false);
   const [selectedImg, setSelectedImg] = useState(-1);
   const [isZoomedIn, setIsZoomedIn] = useState(false);
 
-  const imagelist = props.list;
+  // const imagelist = props.list;
 
-  // const imagelist = [
-  //   "https://picsum.photos/seed/picsum/200/300",
-  //   "https://picsum.photos/seed/picsum/300/200",
-  //   "https://picsum.photos/seed/picsum/400/300",
-  //   "https://picsum.photos/seed/picsum/200/200",
-  //   "https://picsum.photos/seed/picsum/400/300",
-  //   "https://picsum.photos/seed/picsum/500/300",
-  //   "https://picsum.photos/seed/picsum/400/300",
-  //   "https://picsum.photos/seed/picsum/200/200",
-  //   "https://picsum.photos/seed/picsum/200/200",
-  //   "https://picsum.photos/seed/picsum/200/200",
-  //   "https://picsum.photos/seed/picsum/200/200",
-  //   "https://picsum.photos/seed/picsum/200/200",
-  //   "https://picsum.photos/seed/picsum/200/200",
-  //   "https://picsum.photos/seed/picsum/300/200",
-  // ];
+  const imagelist = [
+    "https://picsum.photos/200/300",
+    "https://picsum.photos/300/200",
+    "https://picsum.photos/400/300",
+    "https://picsum.photos/200/200",
+    "https://picsum.photos/400/300",
+    "https://picsum.photos/500/300",
+    "https://picsum.photos/400/300",
+    "https://picsum.photos/200/200",
+    "https://picsum.photos/200/200",
+    "https://picsum.photos/200/200",
+    "https://picsum.photos/200/200",
+    "https://picsum.photos/200/200",
+    "https://picsum.photos/200/200",
+    "https://picsum.photos/300/200",
+  ];
 
   const nextImg = () => {
     resetImg();
     selectedImg === imagelist.length - 1
       ? setSelectedImg(0)
-      : setSelectedImg(selectedImg + 1);
+      : setSelectedImg((prevState) => prevState + 1);
   };
 
   const prevImg = () => {
     resetImg();
     selectedImg === 0
       ? setSelectedImg(imagelist.length - 1)
-      : setSelectedImg(selectedImg - 1);
+      : setSelectedImg((prevState) => prevState - 1);
   };
 
-  const dragImg = (dragEvent) => {
-    // function drag(e) {
-    //   const offsetX = prevX + e.clientX - initX;
-    //   const offsetY = prevY + e.clientY - initY;
-    //   console.log("offset", offsetX, offsetY);
+  // const keyCallback = useCallback(function handleKeys(keyEvent) {
+  //   if (keyEvent.key === "ArrowLeft") {
+  //     prevImg();
+  //   } else if (keyEvent.key === "ArrowRight") {
+  //     nextImg();
+  //   }
+  // }, []);
 
-    //   dragEvent.target.style.translate = `${offsetX}px ${offsetY}px`;
-    // }
+  // useEffect(() => {
+  //   console.log("running");
+  //   function handleKeys(keyEvent) {
+  //     if (keyEvent.key === "ArrowLeft") {
+  //       console.log("left");
+  //     } else if (keyEvent.key === "ArrowRight") {
+  //       console.log("right");
+  //     }
+  //   }
+  //   document.addEventListener("keydown", handleKeys);
+  //   return () => {
+  //     document.removeEventListener("keydown", handleKeys);
+  //   };
+  // }, [isOpen]);
 
-    // var initX = 0,
-    //   initY = 0,
-    //   prevX = 0,
-    //   prevY = 0;
-    // var prevXstr = "",
-    //   prevYstr = "";
+  // const dragImg = (dragEvent) => {
+  // function drag(e) {
+  //   const offsetX = prevX + e.clientX - initX;
+  //   const offsetY = prevY + e.clientY - initY;
+  //   console.log("offset", offsetX, offsetY);
 
-    // window.addEventListener("mousedown", (e) => {
-    //   initX = e.clientX;
-    //   initY = e.clientY;
-    //   window.addEventListener("mousemove", drag);
-    // });
+  //   dragEvent.target.style.translate = `${offsetX}px ${offsetY}px`;
+  // }
 
-    // window.addEventListener("mouseup", function place() {
-    //   [prevXstr, prevYstr] = dragEvent.target.style.translate.split(" ");
-    //   prevX = +prevXstr.replace(/[^-?\d.]/g, "");
-    //   prevY = +prevYstr.replace(/[^-?\d.]/g, "");
-    //   console.log(prevX, prevY);
-    //   window.removeEventListener("mousemove", drag);
-    // });
+  // var initX = 0,
+  //   initY = 0,
+  //   prevX = 0,
+  //   prevY = 0;
+  // var prevXstr = "",
+  //   prevYstr = "";
 
-    function drag(e) {
-      imageRef.current.style.transition = "translate 0s, scale 0.2s";
+  // window.addEventListener("mousedown", (e) => {
+  //   initX = e.clientX;
+  //   initY = e.clientY;
+  //   window.addEventListener("mousemove", drag);
+  // });
 
-      const tX = e.clientX - window.innerWidth / 2;
-      const tY = e.clientY - window.innerHeight / 2;
-      // console.log(tX, tY);
-      dragEvent.target.style.translate = `${tX}px ${tY}px`;
-    }
+  // window.addEventListener("mouseup", function place() {
+  //   [prevXstr, prevYstr] = dragEvent.target.style.translate.split(" ");
+  //   prevX = +prevXstr.replace(/[^-?\d.]/g, "");
+  //   prevY = +prevYstr.replace(/[^-?\d.]/g, "");
+  //   console.log(prevX, prevY);
+  //   window.removeEventListener("mousemove", drag);
+  // });
 
-    window.addEventListener("mousedown", () => {
-      window.addEventListener("mousemove", drag);
-    });
+  // function drag(e) {
+  //   imageRef.current.style.transition = "translate 0s, scale 0.2s";
 
-    window.addEventListener("mouseup", function place() {
-      window.removeEventListener("mousemove", drag);
-    });
+  //   const tX = e.clientX - window.innerWidth / 2;
+  //   const tY = e.clientY - window.innerHeight / 2;
+  //   // console.log(tX, tY);
+  //   dragEvent.target.style.translate = `${tX}px ${tY}px`;
+  // }
 
-    window.addEventListener("touchstart", () => {
-      window.addEventListener("touchmove", drag);
-    });
+  // window.addEventListener("mousedown", () => {
+  //   window.addEventListener("mousemove", drag);
+  // });
 
-    window.addEventListener("touchend", function place() {
-      window.removeEventListener("touchmove", drag);
-    });
-  };
+  // window.addEventListener("mouseup", function place() {
+  //   window.removeEventListener("mousemove", drag);
+  // });
+
+  // window.addEventListener("touchstart", () => {
+  //   window.addEventListener("touchmove", drag);
+  // });
+
+  // window.addEventListener("touchend", function place() {
+  //   window.removeEventListener("touchmove", drag);
+  // });
+  // };
 
   function resetImg() {
     setIsZoomedIn(false);
-    imageRef.current.style.transition = "all 0.2s";
-    imageRef.current.style.translate = "0 0";
+    // imageRef.current.style.transition = "all 0.2s";
+    // imageRef.current.style.translate = "0 0";
   }
 
   const closeImg = () => {
     resetImg();
+    setIsOpen(false);
     setSelectedImg(-1);
   };
 
@@ -123,6 +148,7 @@ function Gallery(props) {
               <li>
                 <img
                   onClick={() => {
+                    setIsOpen(true);
                     setSelectedImg(imgindex);
                   }}
                   src={imgurl}
@@ -145,18 +171,34 @@ function Gallery(props) {
             closeImg();
           }}
         />
+        <div
+          className="gallery-pagination gp-left"
+          onClick={() => {
+            prevImg();
+          }}
+        >
+          <FontAwesomeIcon icon={faAngleLeft} />
+        </div>
+        <div
+          className="gallery-pagination gp-right"
+          onClick={() => {
+            nextImg();
+          }}
+        >
+          <FontAwesomeIcon icon={faAngleRight} />
+        </div>
         <div className="gallery-image">
           <img
             ref={imageRef}
             style={isZoomedIn ? { scale: "2.5" } : { scale: "1" }}
             src={imagelist[selectedImg]}
             draggable="false"
-            onMouseOver={(e) => {
-              dragImg(e);
-            }}
-            onTouchStart={(e) => {
-              dragImg(e);
-            }}
+            // onMouseOver={(e) => {
+            //   dragImg(e);
+            // }}
+            // onTouchStart={(e) => {
+            //   dragImg(e);
+            // }}
             alt="selectedimg"
           />
           <div className="gallery-buttons">
