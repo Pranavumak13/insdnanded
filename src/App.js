@@ -18,6 +18,7 @@ import { Analytics } from "@vercel/analytics/react";
 import TechCollab from "./Components/Multipage/DiscoverUs/TechCollab";
 import AboutUs from "./Components/Multipage/DiscoverUs/AboutUs";
 import AboutCampus from "./Components/Multipage/DiscoverUs/AboutCampus";
+import Gallery from "./Components/Utilities/Gallery";
 
 // Placement Page
 import Placement from "./Components/Multipage/Placements/Placement";
@@ -220,18 +221,45 @@ function App() {
                   element={
                     <>
                       <Placement />
-                      <Recruiters />
                       {" "}
                     </>
                   }
                 ></Route>
                 {/* Discover Us */}
-                <Route path="/discoverus/techcollab" element={
+                <Route path="/discoverus/" element={
                   <>
                     <AboutUs />
                     <AboutCampus />
+                  </>}>
+                </Route>
+
+                <Route path="/discoverus/techcollab" element={
+                  <>
                     <TechCollab />
-                  </>}></Route>
+                    <Gallery list={["/Image1.jpg",
+                      "/Image2.jpg",
+                      "/Image3.jpg",
+                      "/Image4.jpg",
+                      "/Image4.jpg",
+                      "/Image4.jpg",
+                      "/Image4.jpg",
+                      "/Image4.jpg",
+                      "/Image4.jpg",
+                      "/Image4.jpg",
+                      "/Image4.jpg",
+                      "/Image4.jpg",
+                      "/Image4.jpg",
+                      "/Image4.jpg",
+                      "/Image4.jpg",
+                      "/Image4.jpg",
+                      "/Image4.jpg",
+                      "/Event2.jpg",
+                      "/Event3.jpg",
+                      "/Event4.jpg",
+                      "/Event5.jpg",]} />
+                  </>
+                }></Route>
+
                 {/* Courses */}
                 <Route
                   path="/courses/fashiondesign"
@@ -265,7 +293,7 @@ function App() {
                   element={
                     <>
                       {" "}
-                      <JewelleryDesign />{" "}
+                      <JewelleryDesign />
                     </>
                   }
                 ></Route>
