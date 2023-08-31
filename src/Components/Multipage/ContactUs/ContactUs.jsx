@@ -16,7 +16,7 @@ export default function ContactUs() {
 
   // code for starting the new page from top.
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
 
   const sendEmail = (e) => {

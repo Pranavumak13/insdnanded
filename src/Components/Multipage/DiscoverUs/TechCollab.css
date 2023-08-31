@@ -1,0 +1,94 @@
+.TC-container {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* First Container */
+
+.TC-First-Container {
+  height: 200px;
+  width: 100%;
+  color: #ffffff;
+  background-image: var(--lineargrad);
+  display: flex;
+  align-items: end;
+}
+
+.TC-First-Container h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 20px 50px;
+}
+
+/* Second Container */
+
+.TC-width-Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.TC-second-container {
+  height: 360px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
+}
+
+.TC-width-Container h2 {
+  font-size: 2rem;
+}
+
+/* Third Container */
+
+.TC-third-container {
+  height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
+  text-align: justify;
+}
+
+.TC-third-container p {
+  font-size: 1rem;
+  word-spacing: 2px;
+}
+
+/* Mobile View */
+
+@media only screen and (max-width: 768px) {
+  .TC-container {
+    min-height: 400px;
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+  .TC-First-Container {
+    justify-content: center;
+    align-items: center;
+  }
+  .TC-First-Container h1 {
+    font-size: 1.9rem;
+    margin: 0 0;
+  }
+
+  .TC-second-container > h2 {
+    font-size: 1.5rem;
+  }
+
+  .TC-third-container h2 {
+    font-size: 1.5rem;
+    margin: 0.8rem 0;
+  }
+
+  .TC-third-container {
+    height: auto;
+  }
+}

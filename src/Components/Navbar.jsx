@@ -18,7 +18,7 @@ const Navbar = () => {
     },
     {
       name: "COURSES",
-      link: "/courses/fashiondesign",
+
       /* Added the sublinks */
       subLinks: [
         { name: "FASHION DESIGNING", link: "/courses/fashiondesign" },
@@ -110,7 +110,12 @@ const Navbar = () => {
                   <ul className="courses-dropdown-menu">
                     {Link.subLinks.map((subLink) => (
                       <li key={subLink.name}>
-                        <Navlink to={subLink.link}>{subLink.name}</Navlink>
+                        <Navlink
+                          onClick={handleMobileMenuClick}
+                          to={subLink.link}
+                        >
+                          {subLink.name}
+                        </Navlink>
                       </li>
                     ))}
                   </ul>
