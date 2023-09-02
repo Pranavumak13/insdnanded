@@ -2,6 +2,10 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 /* First Container */
@@ -31,9 +35,9 @@
 }
 
 .TC-second-container {
-  height: 360px;
+  height: 50vh;
   width: 80%;
-  margin: 0 auto;
+  margin: 10px auto;
   display: flex;
   flex-direction: column;
   align-items: start;
