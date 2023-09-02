@@ -15,8 +15,9 @@ import Form from "./Components/Multipage/Utilities/Form";
 import { Analytics } from "@vercel/analytics/react";
 
 // About Us Page
-import TechCollab from "./Components/Multipage/DiscoverUs/TechCollab";
 import AboutUs from "./Components/Multipage/DiscoverUs/AboutUs";
+import DirectorsView from "./Components/Multipage/DiscoverUs/DirectorsView";
+import TechCollab from "./Components/Multipage/DiscoverUs/TechCollab";
 import AboutCampus from "./Components/Multipage/DiscoverUs/AboutCampus";
 import Gallery from "./Components/Utilities/Gallery";
 
@@ -226,13 +227,18 @@ function App() {
                   }
                 ></Route>
                 {/* Discover Us */}
-                <Route path="/discoverus/" element={
+                {/* About Us */}
+                <Route path="/discoverus/aboutus" element={
                   <>
                     <AboutUs />
-                    <AboutCampus />
                   </>}>
                 </Route>
-
+                  {/* Director's View */}
+                  <Route path="/discoverus/directorsview" element={
+                  <>
+                    <DirectorsView />
+                  </>}>
+                </Route>
                 <Route path="/discoverus/techcollab" element={
                   <>
                     <TechCollab />
