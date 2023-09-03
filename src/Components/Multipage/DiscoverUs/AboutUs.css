@@ -1,16 +1,25 @@
-.topdiv {
-    display: flex;
-    width: auto;
+.topdiv-aboutus {
+    /* display: flex;
+    width: 100%;
     height: 200px;
     background: var(--lineargrad);
-    align-items: center;
+    align-items: end;
     justify-content: center;
-    font-size: 3.5rem;
-    font-weight: bold;
     font-family: "Lato", Arial, sans-serif;
     letter-spacing: 3px;
     text-transform: uppercase;
+    color: white; */
+    margin: 0 0;
+    display: flex;
+    align-items: end;
+    background: var(--lineargrad);
+    height: 200px;
     color: white;
+}
+.topdiv-aboutus h1{
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 20px 50px;
 }
 .about, .directorsView{
     text-align: center;
@@ -99,11 +108,15 @@
     margin-bottom: 20px;
 }
 @media only screen and (max-width: 786px) {
-    .topdiv {
+    .topdiv-aboutus {
         height: 200px;
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+      .topdiv-aboutus h1 {
+        font-size: 2.5rem;
+        margin: 0 0;
       }
     .belowdiv {
         display: flex;

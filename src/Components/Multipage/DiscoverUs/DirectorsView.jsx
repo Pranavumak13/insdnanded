@@ -3,7 +3,7 @@ import "./DirectorsView.css";
 const DirectorsView = () => {
     return (
         <div>
-            <div className='topdiv'>
+            <div className='topdiv-directorView'>
                 <h1> Discover Us</h1>
             </div>
         <div className='directorsView'>
