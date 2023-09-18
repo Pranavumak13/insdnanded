@@ -9,6 +9,11 @@
   z-index: 50;
 }
 
+.popup img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
 .popup-show {
   display: flex;
 }
@@ -25,7 +30,7 @@
   margin: 10px;
 }
 
-.popup-form .popup-close {
+.popup-close {
   position: absolute;
   display: flex;
   align-items: center;
