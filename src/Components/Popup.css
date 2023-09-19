@@ -9,6 +9,13 @@
   z-index: 50;
 }
 
+.popup img {
+  max-width: 80%;
+  max-height: 80%;
+  transform: scale(0.95);
+  animation: img-boom 5s infinite;
+}
+
 .popup-show {
   display: flex;
 }
@@ -25,7 +32,7 @@
   margin: 10px;
 }
 
-.popup-form .popup-close {
+.popup-close {
   position: absolute;
   display: flex;
   align-items: center;
@@ -41,4 +48,9 @@
   right: 0;
   margin-top: 20px;
   margin-right: 20px;
+}
+
+@keyframes img-boom {
+  0% {transform: scale(0.95);}
+  50% {transform: scale(1.05);}
 }

@@ -2,6 +2,10 @@ import emailjs from "@emailjs/browser";
 import React, { useState, useEffect } from "react";
 import { useRef } from "react";
 import "./Popup.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClose } from "@fortawesome/free-solid-svg-icons";
+
+import EventPoster from "../img/event-poster.jpeg";
 
 function Popup() {
   // const [name, setName] = useState(null);
@@ -42,7 +46,7 @@ function Popup() {
         "service_hk6g79n",
         "template_2skh8fm",
         form.current,
-        process.env.REACT_APP_PUBLIC_KEY
+        process.env.REACT_APP_PUBLIC_KEY  
       )
       .then(
         (result) => {
@@ -68,14 +72,23 @@ function Popup() {
 
   return (
     <div className={isShowPop ? "popup popup-show" : "popup popup-hide"}>
-      <div className="popup-form">
+      <img src={EventPoster} alt="eventposter" />
+      <div
+          className="popup-close"
+          onClick={() => {
+            setIsShowPop(false);
+          }}
+        >
+          <FontAwesomeIcon icon={faClose} />
+        </div>
+      {/* <div className="popup-form">
         <div
           className="popup-close"
           onClick={() => {
             setIsShowPop(false);
           }}
         >
-          x
+          <FontAwesomeIcon icon={faClose} />
         </div>
         <form ref={form} onSubmit={sendEmail}>
           <div className="flex justify-center w-full">
@@ -134,7 +147,7 @@ function Popup() {
             {disabled ? "Sending..." : "Send"}
           </button>
         </form>
-      </div>
+      </div> */}
     </div>
   );
 }
