@@ -6,16 +6,16 @@ import { Link as Navlink } from "react-router-dom";
 const Navbar = () => {
   let Links = [
     { name: "HOME", link: "/" },
-    {
-      name: "DISCOVER US",
-      link: "/discoverus",
-      subLinks: [
-        { name: "About Us", link: "/discoverus/aboutus" },
-        { name: "Director's View", link: "/discoverus/directorsview" },
-        { name: "Technical Collaboration", link: "/discoverus/techcollab" },
-        { name: "About Campus", link: "/discoverus/aboutcampus" },
-      ],
-    },
+    // {
+    //   name: "DISCOVER US",
+    //   link: "/discoverus",
+    //   subLinks: [
+    //     { name: "ABOUT US", link: "/discoverus/aboutus" },
+    //     { name: "ABOUT CAMPUS", link: "/discoverus/aboutcampus" },
+    //     { name: "DIRECTOR'S VIEW", link: "/discoverus/directorsview" },
+    //     { name: "TECHNICAL COLLABORATION", link: "/discoverus/techcollab" },
+    //   ],
+    // },
     {
       name: "COURSES",
 

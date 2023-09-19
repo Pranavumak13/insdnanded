@@ -18,7 +18,6 @@ import { Analytics } from "@vercel/analytics/react";
 import AboutUs from "./Components/Multipage/DiscoverUs/AboutUs";
 import DirectorsView from "./Components/Multipage/DiscoverUs/DirectorsView";
 import TechCollab from "./Components/Multipage/DiscoverUs/TechCollab";
-import AboutCampus from "./Components/Multipage/DiscoverUs/AboutCampus";
 import Gallery from "./Components/Utilities/Gallery";
 
 // Placement Page
@@ -233,8 +232,8 @@ function App() {
                     <AboutUs />
                   </>}>
                 </Route>
-                  {/* Director's View */}
-                  <Route path="/discoverus/directorsview" element={
+                {/* Director's View */}
+                <Route path="/discoverus/directorsview" element={
                   <>
                     <DirectorsView />
                   </>}>

@@ -70,7 +70,7 @@ export default function ContactUs() {
                   href="https://goo.gl/maps/ViPvVwacVrZLgaAc6"
                   style={{ marginTop: 24 }}
                 >
-                  Collge Location
+                  College Location
                 </a>
               </>
               <p>

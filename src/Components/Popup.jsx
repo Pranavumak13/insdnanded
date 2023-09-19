@@ -37,30 +37,30 @@ function Popup() {
   const form = useRef();
   const [disabled, setDisabled] = useState(false);
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    setDisabled(true);
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+  //   setDisabled(true);
 
-    emailjs
-      .sendForm(
-        "service_hk6g79n",
-        "template_2skh8fm",
-        form.current,
-        process.env.REACT_APP_PUBLIC_KEY  
-      )
-      .then(
-        (result) => {
-          alert("Message sent successfully");
-          console.log(result.text);
-          setDisabled(false);
-        },
-        (error) => {
-          alert("Error has occurred");
-          console.log(error.text);
-          setDisabled(false);
-        }
-      );
-  };
+  //   emailjs
+  //     .sendForm(
+  //       "service_hk6g79n",
+  //       "template_2skh8fm",
+  //       form.current,
+  //       process.env.REACT_APP_PUBLIC_KEY
+  //     )
+  //     .then(
+  //       (result) => {
+  //         alert("Message sent successfully");
+  //         console.log(result.text);
+  //         setDisabled(false);
+  //       },
+  //       (error) => {
+  //         alert("Error has occurred");
+  //         console.log(error.text);
+  //         setDisabled(false);
+  //       }
+  //     );
+  // };
 
   const [isShowPop, setIsShowPop] = useState(false);
 
@@ -74,13 +74,13 @@ function Popup() {
     <div className={isShowPop ? "popup popup-show" : "popup popup-hide"}>
       <img src={EventPoster} alt="eventposter" />
       <div
-          className="popup-close"
-          onClick={() => {
-            setIsShowPop(false);
-          }}
-        >
-          <FontAwesomeIcon icon={faClose} />
-        </div>
+        className="popup-close"
+        onClick={() => {
+          setIsShowPop(false);
+        }}
+      >
+        <FontAwesomeIcon icon={faClose} />
+      </div>
       {/* <div className="popup-form">
         <div
           className="popup-close"
